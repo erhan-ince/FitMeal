@@ -148,5 +148,20 @@ app.post("/filter", (req, res) => {
 // diet parameter: vegan
 
 
+//Form-----------------------------
+app.post('/newData', (req, res) => {
+     const newGalleryItem = new GalleryItem({
+          name: req.body.name,
+          email: req.body.email,
+          phone: req.body.phone,
+          url: req.body.url,
+     });
+     newGalleryItem
+          .save()
+          .then((result) => {
+               res.redirect('./');
+          })
+          .catch((err) => console.log(err));
+});
 
  
