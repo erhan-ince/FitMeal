@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <section class="search">
+        <img src="/filter.png" alt="">
+        <h1>FILTER</h1>
+        <div>
+            <div>
+                <h3>ZIEL</h3>
+            </div>
+
+            <form action="/filter" method="POST">
+                <input type="radio" id="ziel1" name="ziel" value="abnehmen">
+                <label for="ziel1"> ABNEHMEN</label><br>
+                <input type="radio" id="ziel2" name="ziel" value="muskel">
+                <label for="ziel2"> MUSKELAUFBAU</label><br>
+                <input type="radio" id="ziel3" name="ziel" value="gesund">
+                <label for="ziel3"> GESUND LEBEN</label><br>
+
+                <div>
+                    <h3>EIWEISSQUELLE</h3>
+                </div>
+
+                <form action="/filter" method="POST">
+                    <input type="radio" id="eiweiss1" name="eiweiss" value="huhn">
+                    <label for="eiweiss1"> HUHN</label><br>
+                    <input type="radio" id="eiweiss2" name="eiweiss" value="rind">
+                    <label for="eiweiss2"> RIND</label><br>
+                    <input type="radio" id="eiweiss3" name="eiweiss" value="vegan">
+                    <label for="eiweiss3"> VEGAN</label><br>
+                    <input type="radio" id="eiweiss4" name="eiweiss" value="fisch">
+                    <label for="eiweiss4"> FISCH</label><br>
+
+                    <div>
+                        <h3>ALLERGENE</h3>
+                    </div>
+
+                    <input type="radio" id="allergene1" name="allergene" value="glutenfrei">
+                    <label for="allergene1"> GLUTENFREI</label><br>
+                    <input type="radio" id="allergene2" name="allergene" value="laktosefrei">
+                    <label for="allergene2"> LAKTOSEFREI</label><br>
+                    <input type="radio" id="allergene3" name="allergene" value="nuesse">
+                    <label for="allergene3"> OHNE NÜSSE</label><br>
+
+                    <div>
+                        <h3>TYP</h3>
+                    </div>
+
+                    <input type="radio" id="typ1" name="typ" value="gericht">
+                    <label for="typ1"> GERICHT</label><br>
+                    <input type="radio" id="typ2" name="typ" value="snack">
+                    <label for="typ2"> SNACK</label><br>
+
+                    <div>
+                        <h3>EIGENSCHAFT</h3>
+                    </div>
+
+                    <input type="radio" id="eigenschaft1" name="eigenschaft" value="low_carb">
+                    <label for="eigenschaft1"> LOW CARB</label><br>
+                    <input type="radio" id="eigenschaft2" name="eigenschaft" value="high_protein">
+                    <label for="eigenschaft2"> HIGH PROTEIN</label><br>
+                    <input type="radio" id="eigenschaft3" name="eigenschaft" value="high_carb">
+                    <label for="eigenschaft3"> HIGH CARB</label><br>
+                    <input type="submit" value="Submit">
+                </form>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
