@@ -6,13 +6,12 @@ require('./config/passport-setup');
 const passport = require('passport');
 const app = express();
 const profileRoutes = require('./routes/profileRoutes');
+const keys = require('./config/keys')
+
 const fetch = require('node-fetch');
 
-const dbUri =
-     'mongodb+srv://erhan:test@safefood.bqpjc.mongodb.net/FitMeal?retryWrites=true&w=majority';
-
 mongoose
-     .connect(dbUri, { useNewUrlParser: true, useUnifiedTopology: true,useFindAndModify:false })
+     .connect(keys.mongodb.dbURI, { useNewUrlParser: true, useUnifiedTopology: true,useFindAndModify:false })
      .then((result) => {
           console.log('db connected');
           app.listen(3000, () => {
@@ -24,7 +23,7 @@ mongoose
         cookieSession({
              name: 'session',
              maxAge: 24 * 60 * 60 * 1000,
-             keys: ['helloworld'],
+             keys: [keys.session.cookieKey]
         })
    );
    
@@ -53,5 +52,5 @@ app.get('/', (req, res) => {
          "https://api.spoonacular.com/recipes/complexSearch?type=type&apiKey=84fe766ead804aee905fa97fc4f9ead9"
     )
     .then((res) => res.json())
-    .then((json) => res.render('index', { APIData: json.results }));
+    .then((json) => res.render('index', { APIData2: json.results }));
 });
