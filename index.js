@@ -11,6 +11,9 @@ const keys = require('./config/keys')
 const fetch = require('node-fetch');
 
 // Isabelle
+require('dotenv').config()
+
+// Isabelle
 
 let maxCalories
 let minProtein
@@ -87,7 +90,7 @@ app.use('/profile', profileRoutes);
 // fetch(`https://api.spoonacular.com/food/search?query=${query_eiweiss} ${query_allergene} ${query_typ} ${query_eigenschaft}&number=2&apiKey=${process.env.apiKey}`)
 
 app.get('/', (req, res) => {
-     fetch(`https://api.spoonacular.com/food/search?query=${query_eiweiss}&number=2&apiKey=${process.env.apiKey}`)
+     fetch(`https://api.spoonacular.com/food/search?query=chicken&number=2&apiKey=${process.env.apiKey}`)
          .then(res => res.json())
          .then(json => {
               data = json;
@@ -138,9 +141,9 @@ app.post("/filter", (req, res) => {
      res.redirect("/")
 })
 
-// min protein muskelaufbau: 25g
+// min protein muskelaufbau: 30g
 // max calories abnehmen: 700 cal
-// protein cal carb fat gesund leben: fat max. 5g, carb max. 30g, protein max. 3g, cal max. 1000 cal
+// protein cal carb fat gesund leben: fat max. 5g, carb max. 100g, protein max. 3g, cal max. 1000 cal
 
 // diet parameter: vegan
 
