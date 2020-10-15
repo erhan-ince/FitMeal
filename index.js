@@ -105,27 +105,24 @@ app.use('/profile', profileRoutes);
 
 // fetch(`https://api.spoonacular.com/food/search?query=${query_eiweiss} ${query_allergene} ${query_typ} ${query_eigenschaft}&number=2&apiKey=${process.env.apiKey}`)
 
-// app.get('/', (req, res) => {
-//      fetch(`https://api.spoonacular.com/food/search?query=chicken&number=2&apiKey=${process.env.apiKey}`)
-//          .then(res => res.json())
-//          .then(json => {
-//               data = json;
-//               console.log(data)
-//           //     res.send(data)
-//              res.status(200).render('index', {  })
-//          })
-//          .catch(err => console.log(err))
-// })
-
- 
-//  app.get('/search/:id', (req, res) => {
-//      console.log(`search query ` + req.params.id)
-//      Meal.find({ company_name: { $regex: new RegExp(req.params.id, 'i') } })
-//          .then(result => {
-//              res.render('companyProfileList', { profileData: result })
-//          })
-//          .catch(err => console.log(err))
-//  })
+app.get('/', (req, res) => {
+     fetch(`https://api.spoonacular.com/food/search?query=chicken&number=2&apiKey=${process.env.apiKey}`)
+         .then(res => res.json())
+         .then(json => {
+              data = json;
+              console.log(data)
+          //     res.send(data)
+             res.status(200).render('index', {  })
+         })
+         .catch(err => console.log(err))
+})
+app.get('/products', (req, res) => {
+     Meal.find()
+          .then((result) => {
+               res.render('products', { meals: result });
+          })
+          .catch((err) => console.log(err));
+});
 
 
 app.post("/filter", (req, res) => {
