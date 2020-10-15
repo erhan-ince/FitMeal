@@ -101,6 +101,13 @@ app.get('/', (req, res) => {
          })
          .catch(err => console.log(err))
 })
+app.get('/products', (req, res) => {
+     Meal.find()
+          .then((result) => {
+               res.render('products', { meals: result });
+          })
+          .catch((err) => console.log(err));
+});
 
 
 app.post("/filter", (req, res) => {
