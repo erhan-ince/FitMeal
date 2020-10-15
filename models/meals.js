@@ -7,18 +7,19 @@ const mealSchema = new Schema({
     title: String,
     image: String,
     calories: Number,
-    protein: String,
-    fat: String,
-    carbs: String,
+    protein: Number,
+    fat: Number,
+    carbs: Number,
     price: Number,
     category: String, // Huhn, Rind, Vegan, Fisch
     allergene: String, // glutenfrei, laktosefrei, ohen Nüsse
     type: String, // Snack oder Gericht
     properties: String, //low carb, high protein, high carb
   
-});
+},     { collection: 'meals' }
+);
 
-const Meal = mongoose.model('meals', userSchema);
+const Meal = mongoose.model('meals', mealSchema);
 
 module.exports = Meal;
 
