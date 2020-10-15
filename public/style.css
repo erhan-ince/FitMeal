@@ -226,3 +226,16 @@ ul {
      background: black;
      color: white
 }
+
+/* Kalorienrechner */
+
+#rechner {
+     background: url("/palmtrees.jpg") center/cover no-repeat;
+     filter: grayscale(100%) opacity(50%);
+}
+#hide {
+     display: none
+}
+#show {
+     display: block
+}

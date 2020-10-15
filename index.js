@@ -25,6 +25,19 @@ let query_allergene
 let query_typ
 let query_eigenschaft
 
+let sex
+let age
+let size
+let weight
+let activity
+let training
+let rate
+let need
+let carbs
+let protein
+let fat
+
+
 //
 
 
@@ -147,6 +160,45 @@ app.post("/filter", (req, res) => {
 
 // diet parameter: vegan
 
+app.post('/rechner', (req, res) => {
+     console.log(req.body)
+     sex = req.body.sex
+     age = req.body.age
+     size = req.body.size
+     weight = req.body.weight
+     activity = req.body.activity
+     training = req.body.training
+     
+     res.status(200).redirect('/kalorienrechner')
+})
+
+app.get('/kalorienbedarf', (req, res) => {
+     res.status(200).render('kalorienbedarf', {})
+})
+
+
+app.get('/kalorienrechner', (req, res) => {
+     if (sex == "weiblich") {
+          rate = ((Number(weight) * 10) + (Number(size) * 6.25) - (Number(age) * 5) - 161).toFixed()
+     } else {
+          rate = ((Number(weight) * 10) + (Number(size) * 6.25) - (Number(age) * 5) + 5).toFixed()
+     }
+     need = (rate * Number(activity)).toFixed()
+     if (training=="abnehmen") {
+          need = need - 300
+     } else if (training=="muskelaufbau") {
+          need = need + 300
+     }
+     else {
+          need = need
+     }
+     carbs = (need * 0.5 / 4).toFixed()
+     protein = (need * 0.25 / 4).toFixed()
+     fat = (need * 0.25 / 9).toFixed()
+     
+     console.log(rate, need, carbs, protein, fat)
+     res.status(200).render('kalorienrechner', {rate, need, carbs, protein, fat, sex, age, size, weight, activity, training})
+})
 
 //Form-----------------------------
 app.post('/newData', (req, res) => {
@@ -164,4 +216,3 @@ app.post('/newData', (req, res) => {
           .catch((err) => console.log(err));
 });
 
- 
