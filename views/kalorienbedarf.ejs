@@ -9,49 +9,65 @@
 </head>
 
 <body>
-    <section id="rechner">
+    <section class="rechner">
         <h1> FITTASTE KALORIENRECHNER</h1>
 
         <form action="/rechner" method="POST">
-            <div>
-                <img src="" alt="">
+            <div class="rechner_container">
+                <img class="rechner_icon_big" src="/gender.png" alt="">
                 <h3>GESCHLECHT</h3>
             </div>
-            <input type="radio" id="" name="sex" value="weiblich">
-            <label for=""> Weiblich</label><br>
-            <input type="radio" id="" name="sex" value="männlich">
-            <label for=""> Männlich</label><br>
-            <div>
-                <img src="" alt="">
+            <div class="gender">
+                <input type="radio" id="" name="gender" value="weiblich">
+                <label for="">Weiblich</label>
+                <img class="rechner_icon_small" src="/female.png" alt="">
+            </div>
+            <div class="gender">
+                <input type="radio" id="" name="gender" value="männlich">
+                <label for="">Männlich</label>
+                <img class="rechner_icon_small" src="/male.png" alt="">
+            </div>
+
+            <div class="rechner_container">
+                <img class="rechner_icon_big" src="/person.png" alt="">
                 <h3>PERSÖNLICHE INFORMATIONEN</h3>
             </div>
-            <div>
-                <h3>Alter</h3>
-                <input type="text" name="age" id="">
-                <h3>Körpergrösse</h3>
-                <input type="text" name="size" id="">
-                <h3>Gewicht</h3>
-                <input type="text" name="weight" id="">
+            <div id="info">
+                <div>
+                    <h3>Alter</h3>
+                    <input type="text" name="age" id="">
+                </div>
+                <div>
+                    <h3>Körpergrösse</h3>
+                    <input type="text" name="size" id="">
+                </div>
+                <div>
+                    <h3>Gewicht</h3>
+                    <input type="text" name="weight" id="">
+                </div>
             </div>
 
-
-            <div>
-                <img src="" alt="">
+            <div class="rechner_container">
+                <img class="bicycle" src="/bicycle.png" alt="">
                 <h3>KÖRPERLICHE AKTIVITÄT</h3>
             </div>
             <input type="radio" id="" name="activity" value="1.20">
-            <label for=""> kaum aktiv</label><br>
+            <label for=""> kaum aktiv</label>
+            <a href=""><img class="rechner_icon_big" src="/information.png" alt=""></a><br>
             <input type="radio" id="" name="activity" value="1.37">
-            <label for=""> leicht aktiv</label><br>
+            <label for=""> leicht aktiv</label>
+            <a href=""><img class="rechner_icon_big" src="/information.png" alt=""></a><br>
             <input type="radio" id="" name="activity" value="1.55">
-            <label for=""> aktiv</label><br>
+            <label for=""> aktiv</label><a href=""><img class="rechner_icon_big" src="/information.png" alt=""></a><br>
             <input type="radio" id="" name="activity" value="1.72">
-            <label for=""> sehr aktiv</label><br>
+            <label for=""> sehr aktiv</label>
+            <a href=""><img class="rechner_icon_big" src="/information.png" alt=""></a><br>
             <input type="radio" id="" name="activity" value="1.90">
-            <label for=""> profi Sportler</label><br>
+            <label for=""> profi Sportler</label>
+            <a href=""><img class="rechner_icon_big" src="/information.png" alt=""></a><br>
 
-            <div>
-                <img src="" alt="">
+            <div class="rechner_container">
+                <img class="rechner_icon_big" src="/dumbbell.png" alt="">
                 <h3>TRAININGSZIEL</h3>
             </div>
             <input type="radio" id="" name="training" value="abnehmen">
@@ -63,7 +79,7 @@
 
 
 
-            <input type="submit" value="Jetzt Kalorienbedarf berechnen">
+            <input id="rechner_btn" type="submit" value="Jetzt Kalorienbedarf berechnen">
         </form>
         <!-- <article>
             <div class="ergebnis">

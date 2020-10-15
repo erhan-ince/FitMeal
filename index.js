@@ -26,7 +26,7 @@ let query_allergene
 let query_typ
 let query_eigenschaft
 
-let sex
+let gender
 let age
 let size
 let weight
@@ -42,11 +42,13 @@ let fat
 //
 
 
+// keys.mongodb.dbURI
+
 mongoose
      .connect(keys.mongodb.dbURI, { useNewUrlParser: true, useUnifiedTopology: true,useFindAndModify:false })
      .then((result) => {
           console.log('db connected');
-          app.listen(3000, () => {
+          app.listen(3001, () => {
                console.log('listening at 3000');
           });
      })
@@ -131,14 +133,14 @@ app.post("/filter", (req, res) => {
           maxCalories=3000
      }
      if (req.body.ziel=="muskel") {
-          minProtein = 25
+          minProtein = 30
      } else {
           minProtein = 0
      }
      if (req.body.ziel=="gesund") {
           maxFat = 5;
-          maxCarbs = 30;
-          maxProtein = 3;
+          maxCarbs = 100;
+          maxProtein = 5;
           maxCalories = 1000
      } else {
           maxFat = 50;
@@ -159,18 +161,18 @@ app.post("/filter", (req, res) => {
      console.log("eingenschaft: " + query_eigenschaft)
 
 
-     res.redirect("/")
+     res.redirect(`/filter/${req.body.ziel}/${req.body.eiweiss}/${req.body.allergene}/${req.body.type}/${req.body.eigenschaft}`)
 })
 
 // min protein muskelaufbau: 30g
 // max calories abnehmen: 700 cal
-// protein cal carb fat gesund leben: fat max. 5g, carb max. 100g, protein max. 3g, cal max. 1000 cal
+// protein cal carb fat gesund leben: fat max. 5g, carb max. 100g, protein max. 5g, cal max. 1000 cal
 
 // diet parameter: vegan
 
 app.post('/rechner', (req, res) => {
      console.log(req.body)
-     sex = req.body.sex
+     gender = req.body.gender
      age = req.body.age
      size = req.body.size
      weight = req.body.weight
@@ -186,12 +188,12 @@ app.get('/kalorienbedarf', (req, res) => {
 
 
 app.get('/kalorienrechner', (req, res) => {
-     if (sex == "weiblich") {
+     if (gender == "weiblich") {
           rate = ((Number(weight) * 10) + (Number(size) * 6.25) - (Number(age) * 5) - 161).toFixed()
      } else {
           rate = ((Number(weight) * 10) + (Number(size) * 6.25) - (Number(age) * 5) + 5).toFixed()
      }
-     need = (rate * Number(activity)).toFixed()
+     need = (Number(rate) * Number(activity)).toFixed()
      if (training=="abnehmen") {
           need = need - 300
      } else if (training=="muskelaufbau") {
@@ -205,7 +207,7 @@ app.get('/kalorienrechner', (req, res) => {
      fat = (need * 0.25 / 9).toFixed()
      
      console.log(rate, need, carbs, protein, fat)
-     res.status(200).render('kalorienrechner', {rate, need, carbs, protein, fat, sex, age, size, weight, activity, training})
+     res.status(200).render('kalorienrechner', {rate, need, carbs, protein, fat, gender, age, size, weight, activity, training})
 })
 
 //Form-----------------------------
@@ -235,4 +237,5 @@ app.post('/newData', (req, res) => {
           })
           .catch((err) => console.log(err));
 });
+
 
