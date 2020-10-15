@@ -7,6 +7,7 @@ const passport = require('passport');
 const app = express();
 const profileRoutes = require('./routes/profileRoutes');
 const keys = require('./config/keys')
+const Meal = require('./models/meals');
 
 const fetch = require('node-fetch');
 
@@ -201,17 +202,29 @@ app.get('/kalorienrechner', (req, res) => {
 })
 
 //Form-----------------------------
+app.get('/form', (req, res) => {
+     res.render('form');
+});
+
 app.post('/newData', (req, res) => {
-     const newGalleryItem = new GalleryItem({
-          name: req.body.name,
-          email: req.body.email,
-          phone: req.body.phone,
-          url: req.body.url,
+     const newMeal = new Meal({
+          title: req.body.title,
+          image: req.body.image,
+          calories: req.body.calories,
+          protein: req.body.protein,
+          fat: req.body.fat,
+          carbs: req.body.carbs,
+          price: req.body.price,
+          category: req.body.category,
+          allergene: req.body.allergene,
+          type: req.body.type,
+          properties: req.body.properties,
      });
-     newGalleryItem
+     newMeal
           .save()
           .then((result) => {
-               res.redirect('./');
+               console.log('new food saved');
+               res.redirect('./form');
           })
           .catch((err) => console.log(err));
 });
