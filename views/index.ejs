@@ -12,14 +12,8 @@
      </head>
 
      <body>
-          <nav>
-               <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/auth/login">Login</a></li>
-                    <li><a href="/auth/logout">Logout</a></li>
-                    <li><a href="/profile/">Profil</a></li>
-               </ul>
-          </nav>
+          <%-include('./partials/header')%>
+
           <section id="EfirstSection">
                <div class="EfirstDiv">
                <h1 class="EfirstH1">Zeit, Essen zu bestellen</h1>
@@ -189,5 +183,7 @@
                     </div>
                </div>
           </section>
+          <%-include('./partials/footer')%>
+
      </body>
 </html>
