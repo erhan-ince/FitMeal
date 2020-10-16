@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
 * {
      margin: 0;
      padding: 0;
+     font-family: 'Roboto', sans-serif;
 }
 nav {
      background: gold;
@@ -225,4 +227,279 @@ ul {
 .search {
      background: black;
      color: white
+}
+/*.....abdulhaq.....sec1*/
+.abdulsectparagrid{
+     background: #F8F5F2;
+
+}
+.abdulsect3dive{
+     height: 55vh;
+     background: #F8F5F2;
+}
+#abdulhadh3{
+   display: flex;
+   justify-content: center;
+   padding-top: 3%;
+}
+#abdulhadh2{
+     display: flex;
+     justify-content: center;
+     padding-top: 1%;
+     color: #65C770;
+     font-size: 2em;
+}
+/*----bordernsection-----*/
+.abdulbordersgrid1{
+     border: #ffffff 1px solid ;
+     width: 17vw;
+     height: 40vh;
+     background: #ffffff;
+}
+.abdulgruneborderzw{
+     border: #65C770 1px solid;
+     width: 5vw;
+     height: 10vh;
+     background: #65C770;
+     transform: translateY(-50%);
+     margin-left: 33%;
+}
+.abdulbordersgrid2{
+     border: #ffffff 1px solid ;
+     width: 17vw;
+     height: 44vh;
+     background: #ffffff;
+}
+.abdulbordersgrid3{
+     border: #ffffff 1px solid ;
+     width: 17vw;
+     height: 40vh;
+     background: #ffffff;
+}
+.abdulsect3dive{
+     display: flex;
+     justify-content: space-between;
+     padding-top: 10%;
+     padding-left: 23%;
+     padding-right: 23%;
+}
+.abdulh2zwbor{
+     color: #0A3847;
+     padding-left: 24%;
+}
+.abdulparpar1{
+     padding-top: 5%;
+     padding-left: 15%;
+     width: 70%;
+     text-align: left;
+     color: #666666;
+     font-size: 14px;
+}
+.abdulparpar2{
+     padding-top: 5%;
+     padding-left: 15%;
+     width: 70%;
+     text-align: left;  
+     color: #666666;
+     font-size: 14px;
+
+}
+.abdulparpar3{
+     padding-top: 9%;
+     padding-left: 15%;
+     width: 70%;
+     text-align: left;  
+     color: #666666;
+     font-size: 14px;
+
+}
+/*--neusection--sec2-*/
+.abdulsecinfosflex{
+     display: flex;
+     justify-content: space-between;
+     padding-left: 15%;
+     padding-right: 15%;
+     padding-top: 4%;
+     background: #fbf9f7;
+}
+.abduldivgredinfos11 p{
+     width: 58%;
+     padding-top: 14%;
+}
+.abduldivgredinfos22{
+     border-left: black 3px solid;
+     height: 31vh;
+     padding-right: 23%;
+}
+.abankabdulank{
+     text-decoration: none;
+     color: #1574F5;
+}
+.abduldivgredinfos33{
+     border: black 3px solid;
+     border-radius: 10px;
+     width: 20vw;
+     height: 30vh;
+}
+.abduldillon2{
+     display: flex;
+     justify-content: space-between;
+     padding-top: 4%;
+}
+.abdulinna1{
+     display: flex;
+     justify-content: space-between; 
+     padding-top: 4%;
+
+}
+.abduldivgredinfos33 h2{
+     padding-top: 8%;
+     padding-left: 10%;
+}
+.textscheibe{
+     padding-right: 30%;
+     padding-top: 6%;
+}
+.abduldillon2 img{
+     padding-left: 5%;
+}
+.abdulinna1 img{
+     padding-left: 5%;
+}
+/*--neusection--sec3-*/
+.abdulsecnavbtwen3{
+     background: #fbf9f7;
+}
+.abdulsecnavbtwen3 h4{
+     display: flex;
+     justify-content: center;
+     padding-top: 3%;
+}
+.abdulsecnavbtwen3 h2{
+     display: flex;
+     justify-content: center;
+     padding-top: 1%;
+     color: #65C770;
+}
+.abdulullibtwen{
+     display: flex;
+     justify-content: space-between;
+     padding-top: 3%;
+     padding-left: 15%;
+     padding-right: 28%;
+}
+.abdulullibtwen li{
+     list-style: none;
+}
+.abdulullibtwen li a{
+     text-decoration: none;
+     color: #0A3847;
+}
+#abduljustcolor{
+     color: #65C770;
+}
+.abdulborderbottomsec3{
+     border-bottom: #CFCAC4 2px solid;
+     padding-top: 3%;
+     width: 68%;
+     margin-left: 13%;
+}
+/*--neusection--sec4-*/
+.abdulsec4textsec{
+     background: #fbf9f7;
+     height: 74vh;
+}
+.abdulsec4textsec h2{
+     padding-top: 3%;
+     display: flex;
+     justify-content: center;
+     color: #454545;
+}
+.abdulsec4textsec p{
+     padding-top: 2%;
+     display: flex;
+     justify-content: center;
+     color: #2B2A2A;
+     text-align: center;
+     width: 70%;
+     padding-left: 13%;
+     font-size: 15px;
+}
+/*--neusection--sec5-*/
+.abdulletztesecforfooter{
+     background: url('/foterbackground.png');
+     height: 32vh;
+}
+.abdulletztesecforfooter{
+     display: flex;
+     justify-content: space-between;
+     padding-top: 4%;
+     padding-left: 1%;
+     padding-right: 1%;
+}
+.abduldivfoterflexmitbilder2{
+     width: 40%;
+     font-size: 1.5em;
+     color: white;
+     line-height: 170%;
+     text-align: center;
+     word-spacing: 3px;
+}
+#abdulphotoRectangle33{
+     padding-left: 15%;
+}
+/*------abdulhaq,hinweise------*/
+#abduparaaa1{
+     padding-top: 5%;
+     padding-left: 17%;
+     width: 57vw;
+     color: #2B2A2A;
+     font-size: 15px;
+}
+#abduparaaa2{
+     padding-top: 2%;
+     padding-left: 17%;
+     width: 66vw;
+     color: #2B2A2A;
+     font-size: 15px;
+}
+.abduHaa123{
+     padding-top: 2%;
+     padding-left: 17%;
+     color: #454545;
+
+}
+#abduparaaa3{
+     padding-top: 2%;
+     padding-left: 17%;
+     width: 60vw;
+     color: #2B2A2A;
+     font-size: 15px;
+}
+#abduparaaa4{
+     padding-top: 2%;
+     padding-left: 17%;
+     width: 58vw;
+     color: #2B2A2A;
+     font-size: 15px;
+}
+.abduparaaa5und6{
+     padding-top: 1%;
+     padding-left: 20%;
+     color: #2B2A2A;
+     font-size: 14px;   
+}
+#abduparaaa7{
+     padding-top: 2%;
+     padding-left: 17%;
+     width: 58vw;
+     color: #2B2A2A;
+     font-size: 15px;
+}
+#abduparaaa8{
+     padding-top: 2%;
+     padding-left: 17%;
+     width: 58vw;
+     color: #2B2A2A;
+     font-size: 15px;
 }

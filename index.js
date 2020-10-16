@@ -138,6 +138,10 @@ app.post("/filter", (req, res) => {
      res.redirect("/")
 })
 
+app.get('/hinweise', (req, res) => {
+     res.render('hinweise')
+})
+
 // min protein muskelaufbau: 25g
 // max calories abnehmen: 700 cal
 // protein cal carb fat gesund leben: fat max. 5g, carb max. 30g, protein max. 3g, cal max. 1000 cal
