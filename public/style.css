@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
-<<<<<<< HEAD
-   margin: 0;
-   padding: 0;
-=======
      margin: 0;
      padding: 0;
 }
@@ -12,7 +8,7 @@
 body {
      font-family: 'Roboto', sans-serif;
 }
-nav {
+/* nav {
      background: gold;
      color: #ffffff;
      padding: 30px 20px 10px;
@@ -27,207 +23,207 @@ ul {
      display: flex;
      margin: 0;
      list-style: none;
->>>>>>> 075794089b7ff78c205b6b2a64019ea43ad692d4
-}
+} */
 
 #EfirstSection {
-   height: 133vh;
-   display: flex;
-   /* justify-content: center; */
-   align-items: center;
-   flex-direction: column;
-   background: #65c770;
+     height: 133vh;
+     display: flex;
+     /* justify-content: center; */
+     align-items: center;
+     flex-direction: column;
+     background: #65c770;
 }
 #EfirstSection img {
-   width: 100%;
-   height: 125vh;
+     width: 100%;
+     height: 125vh;
 }
 .EfirstH1 {
-   font-family: Roboto;
-   font-style: normal;
-   font-weight: normal;
-   font-size: 72px;
-   line-height: 72px;
-   /* or 100% */
-   margin: 0;
-   text-align: center;
-   padding: 20px 0;
-   color: #ffffff;
-   width: 700px;
+     font-family: Roboto;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 72px;
+     line-height: 72px;
+     /* or 100% */
+     margin: 0;
+     text-align: center;
+     padding: 20px 0;
+     color: #ffffff;
+     width: 700px;
 }
 .EfirstP {
-   font-family: Roboto;
-   font-style: normal;
-   font-weight: normal;
-   font-size: 26px;
-   line-height: 39px;
-   text-align: center;
+     font-family: Roboto;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 26px;
+     line-height: 39px;
+     text-align: center;
 
-   color: #ffffff;
+     color: #ffffff;
 }
 .Esearch {
-   width: 495px;
-   height: 48px;
-   background: #ffffff;
-   border-radius: 2px 0px 0px 2px;
+     width: 495px;
+     height: 48px;
+     background: #ffffff;
+     border-radius: 2px 0px 0px 2px;
 }
 .Eanzeigen {
-   width: 135px;
-   height: 48px;
-   background: #1574f5;
-   border: 1px solid #1574f5;
-   box-sizing: border-box;
-   border-radius: 0px 2px 2px 0px;
+     width: 135px;
+     height: 48px;
+     background: #1574f5;
+     border: 1px solid #1574f5;
+     box-sizing: border-box;
+     border-radius: 0px 2px 2px 0px;
 }
 /* ----------------------------So Funktioniert FitMeal.de----------------------- */
 .Efunktioniert {
-   margin-top: 3%;
+     margin-top: 3%;
 }
 .EfuntkioniertText {
-   text-align: center;
-   line-height: 30px;
+     text-align: center;
+     line-height: 30px;
 }
 .EfuntkioniertText h2 {
-   color: #65c770;
+     color: #65c770;
 }
 .EgridItems {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
 }
 .EflexDiv {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   margin-top: 10%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-top: 10%;
 }
 .Estandort {
-   text-align: center;
+     text-align: center;
 }
 .Estandort img {
-   height: 15vh;
+     height: 15vh;
 }
 .EflexDiv h5 {
-   background-color: rgb(0, 76, 139);
-   color: white;
-   width: 20px;
-   height: 20px;
-   text-align: center;
-   padding-top: 7px;
-   margin-right: 20px;
+     background-color: rgb(0, 76, 139);
+     color: white;
+     width: 20px;
+     height: 20px;
+     text-align: center;
+     padding-top: 7px;
+     margin-right: 20px;
 }
 .EMarginHamburger {
-   margin: 10px;
+     margin: 10px;
 }
 /* ---------------------------------Die Leckersten Produkte-------------------------- */
 .EgreenText {
-   text-align: center;
-   margin-top: 5%;
-   background-color: #65c770;
-   height: 50vh;
+     text-align: center;
+     margin-top: 5%;
+     background-color: #65c770;
+     height: 50vh;
 }
 .EgreenText h3 {
-   font-family: Roboto;
-   font-style: normal;
-   font-weight: normal;
-   font-size: 27px;
-   line-height: 40px;
-   padding-top: 15px;
-   text-align: center;
+     font-family: Roboto;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 27px;
+     line-height: 40px;
+     padding-top: 15px;
+     text-align: center;
 
-   color: #454545;
+     color: #454545;
 }
 
 .EgreenText h5 {
-   font-family: Roboto;
-   font-style: normal;
-   font-weight: normal;
-   font-size: 22px;
-   line-height: 22px;
-   padding-top: 10px;
-   text-align: center;
+     font-family: Roboto;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 22px;
+     line-height: 22px;
+     padding-top: 10px;
+     text-align: center;
 
-   color: #000000;
+     color: #000000;
 }
 
 .EcheckEins {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   padding-top: 20px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding-top: 20px;
 }
 /* -------------------------------Produkte--------------------------------- */
 .EGerichte {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   gap: 10px;
-   padding: 20px 20px;
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 10px;
+     padding: 20px 20px;
 }
 .EgerichteKategorien {
-   border: 1px solid grey;
+     border: 1px solid grey;
 }
 .EgerichteKategorien img {
-   width: 100%;
-   height: 40vh;
+     width: 100%;
+     height: 40vh;
 }
 .Epreis {
-   display: flex;
-   justify-content: space-between;
+     display: flex;
+     justify-content: space-between;
 }
 .EBorderBottom {
-   display: flex;
-   justify-content: space-between;
-   padding-top: 20px;
+     display: flex;
+     justify-content: space-between;
+     padding-top: 20px;
 }
 .EBorderBottom h1 {
-   border-bottom: 1px solid grey;
-   width: 70%;
+     border-bottom: 1px solid grey;
+     width: 70%;
 }
 .EBorderBottom {
-   padding-right: 20px;
+     padding-right: 20px;
 }
 .ESofort {
-   display: flex;
-   justify-content: space-between;
-   padding-top: 20px;
+     display: flex;
+     justify-content: space-between;
+     padding-top: 20px;
 }
 .EWarenkorb {
-   display: flex;
-   flex-direction: column;
+     display: flex;
+     flex-direction: column;
 }
 /* -----------------------------Login-------------------------------- */
 .login-with-google-btn {
-   text-decoration: none;
-   transition: background-color 0.3s, box-shadow 0.3s;
-   padding: 12px 16px 12px 42px;
-   border: none;
-   border-radius: 3px;
-   box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 1px 1px rgba(0, 0, 0, 0.25);
-   color: #000;
-   font-size: 14px;
-   font-weight: 500;
-   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-      Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-   background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=);
-   background-color: white;
-   background-repeat: no-repeat;
-   background-position: 12px 11px;
+     text-decoration: none;
+     transition: background-color 0.3s, box-shadow 0.3s;
+     padding: 12px 16px 12px 42px;
+     border: none;
+     border-radius: 3px;
+     box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 1px 1px rgba(0, 0, 0, 0.25);
+     color: #000;
+     font-size: 14px;
+     font-weight: 500;
+     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+          Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+          sans-serif;
+     background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=);
+     background-color: white;
+     background-repeat: no-repeat;
+     background-position: 12px 11px;
 }
 .login-with-google-btn:hover {
-   box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.25);
+     box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 .login-with-google-btn:active {
-   background-color: #eeeeee;
+     background-color: #eeeeee;
 }
 .login-with-google-btn:focus {
-   outline: none;
-   box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.25),
-      0 0 0 3px #c8dafc;
+     outline: none;
+     box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.25),
+          0 0 0 3px #c8dafc;
 }
 .login-with-google-btn:disabled {
-   filter: grayscale(100%);
-   background-color: #ebebeb;
-   box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 1px 1px rgba(0, 0, 0, 0.25);
-   cursor: not-allowed;
+     filter: grayscale(100%);
+     background-color: #ebebeb;
+     box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 1px 1px rgba(0, 0, 0, 0.25);
+     cursor: not-allowed;
 }
 
 /* Isabelle -CSS */
@@ -235,200 +231,49 @@ ul {
 /* search */
 
 .search {
-   background: black;
-   color: white;
+     background: black;
+     color: white;
 }
 
 /* Kalorienrechner */
 
-<<<<<<< HEAD
-#rechner {
-   background: url('/palmtrees.jpg') center/cover no-repeat;
-   filter: grayscale(100%) opacity(50%);
-}
-#hide {
-   display: none;
-}
-#show {
-   display: block;
-}
-/* Products */
-.werte {
-   display: flex;
-   flex-direction: column;
-}
-.calorie {
-   display: flex;
-   justify-content: space-evenly;
-}
-.Ecal {
-   display: flex;
-   justify-content: space-evenly;
-}
-
-/* Abdulhaq Header */
-#navsec1 {
-   display: flex;
-   justify-content: space-between;
-   padding-top: 0.5%;
-   padding-right: 36%;
-   padding-left: 10%;
-   font-size: 14px;
-}
-#navnav1 {
-   background: #65c770;
-   height: 15vh;
-}
-#navnav1 ul {
-   display: flex;
-   justify-content: space-between;
-   padding-right: 50%;
-   padding-left: 3%;
-   padding-top: 4%;
-}
-#navnav1 ul li {
-   list-style: none;
-}
-#navnav1 ul li a {
-   text-decoration: none;
-   color: #666666;
-}
-/* Abdulhaq Footer */
-#backgroundfoter {
-   height: 80vh;
-   background: #2f2f2f;
-   color: rgb(248, 237, 237);
-   font-family: sans-serif;
-}
-#navfooterimg {
-   display: flex;
-   justify-content: space-between;
-   padding-top: 15%;
-   padding-left: 25%;
-   padding-right: 25%;
-}
-#navsecgrid {
-   display: flex;
-   justify-content: space-between;
-   padding-left: 7%;
-   padding-right: 7%;
-   padding-top: 3%;
-}
-ul {
-   list-style: none;
-}
-a {
-   text-decoration: none;
-   color: white;
-}
-a:hover {
-   color: blanchedalmond;
-}
-.abdulh1 {
-   font-size: 1.8em;
-   word-spacing: 10px;
-   padding-left: 10%;
-   padding-top: 3%;
-}
-.abdulpar1 {
-   padding-top: 2%;
-}
-#navsecgrid span {
-   color: #65c770;
-   font-size: 14px;
-   padding-left: 20px;
-}
-#footernavsuche {
-   width: 32vw;
-   height: 5.2vh;
-   padding-top: 1.6%;
-}
-#footernavsubmit {
-   width: 10vw;
-   height: 7.1vh;
-   padding-top: 1%;
-   background: #65c770;
-   color: white;
-   font-size: 16px;
-}
-.navdivsubmit {
-   padding-top: 3%;
-}
-.navborderbottom {
-   border-bottom: 2px black solid;
-   width: 86%;
-   padding-top: 1.5%;
-   margin-left: 7%;
-}
-#navfooter2link {
-   text-align: right;
-}
-.navfootfootsec {
-   display: flex;
-   justify-content: space-between;
-   padding-left: 7%;
-   padding-right: 7%;
-}
-.fotpaze1padi {
-   display: flex;
-   justify-content: space-between;
-}
-#fotnavimg {
-   display: flex;
-   justify-content: space-between;
-   padding-top: 9%;
-}
-.fotnavppptop {
-   padding-left: 10px;
-   padding-top: 5px;
-}
-.navfootfootsec p {
-   font-size: 15px;
-}
-.navfootfootsec span {
-   font-size: 13px;
-}
-#fotnavparaaa0 {
-   padding-top: 5.3%;
-=======
 .rechner {
-     background: url("/palmtrees.png") center/cover no-repeat;
+     background: url('/palmtrees.png') center/cover no-repeat;
      margin: 15%;
-     padding: 4em
+     padding: 4em;
 }
 .rechner h1 {
      text-align: center;
      padding-bottom: 2em;
 }
 .rechner_icon_big {
-     width: 20px
+     width: 20px;
 }
 
 .rechner_icon_small {
-     width: 40px
+     width: 40px;
 }
 .bicycle {
-     width: 30px
+     width: 30px;
 }
 .rechner_container {
      display: flex;
      align-items: center;
      padding-top: 1em;
      padding-bottom: 1em;
-
 }
 .rechner_container h3 {
      padding-left: 0.5em;
 }
 #rechner_btn {
      width: 100%;
-    height: 7.1vh;
-    padding: 1%;
-    background: #65C770;
-    border: none;
-    color: white;
-    font-size: 16px;
-    margin-top: 1em
+     height: 7.1vh;
+     padding: 1%;
+     background: #65c770;
+     border: none;
+     color: white;
+     font-size: 16px;
+     margin-top: 1em;
 }
 
 #info {
@@ -436,14 +281,14 @@ a:hover {
 }
 
 #info div {
-     margin-right: 1.5em
+     margin-right: 1.5em;
 }
 .gender {
      display: flex;
      align-items: center;
 }
 .gender label {
-     padding-left: 0.2em
+     padding-left: 0.2em;
 }
 .result {
      display: flex;
@@ -451,9 +296,133 @@ a:hover {
      align-items: baseline;
 }
 #rate {
-     color: #65C770;
->>>>>>> 075794089b7ff78c205b6b2a64019ea43ad692d4
+     color: #65c770;
 }
 .result p {
      font-size: 2em;
+}
+/* -----------------Header Abdul------------------------------- */
+#navsec1 {
+     display: flex;
+     justify-content: space-between;
+     padding-top: 0.5%;
+     padding-right: 36%;
+     padding-left: 10%;
+     font-size: 14px;
+}
+#navnav1 {
+     background: #65c770;
+     height: 10vh;
+}
+#navnav1 ul {
+     display: flex;
+     justify-content: space-between;
+     padding-right: 50%;
+     padding-left: 3%;
+     padding-top: 4%;
+}
+#navnav1 ul li {
+     list-style: none;
+}
+#navnav1 ul li a {
+     text-decoration: none;
+     color: #666666;
+}
+/* -----------------Footer Abdul------------------------------- */
+#backgroundfoter {
+     height: 60vh;
+     background: #2f2f2f;
+     color: rgb(248, 237, 237);
+     font-family: sans-serif;
+}
+#navfooterimg {
+     display: flex;
+     justify-content: space-between;
+     padding-top: 15%;
+     padding-left: 25%;
+     padding-right: 25%;
+}
+#navsecgrid {
+     display: flex;
+     justify-content: space-between;
+     padding-left: 7%;
+     padding-right: 7%;
+     padding-top: 3%;
+}
+ul {
+     list-style: none;
+}
+a {
+     text-decoration: none;
+     color: white;
+}
+a:hover {
+     color: blanchedalmond;
+}
+.abdulh1 {
+     font-size: 1.8em;
+     word-spacing: 10px;
+     padding-left: 10%;
+     padding-top: 3%;
+}
+.abdulpar1 {
+     padding-top: 2%;
+}
+#navsecgrid span {
+     color: #65c770;
+     font-size: 14px;
+     padding-left: 20px;
+}
+#footernavsuche {
+     width: 32vw;
+     height: 5.2vh;
+     padding-top: 1.6%;
+}
+#footernavsubmit {
+     width: 10vw;
+     height: 7.1vh;
+     padding-top: 1%;
+     background: #65c770;
+     color: white;
+     font-size: 16px;
+}
+.navdivsubmit {
+     padding-top: 3%;
+}
+.navborderbottom {
+     border-bottom: 2px black solid;
+     width: 86%;
+     padding-top: 1.5%;
+     margin-left: 7%;
+}
+#navfooter2link {
+     text-align: right;
+}
+.navfootfootsec {
+     display: flex;
+     justify-content: space-between;
+     padding-left: 7%;
+     padding-right: 7%;
+}
+.fotpaze1padi {
+     display: flex;
+     justify-content: space-between;
+}
+#fotnavimg {
+     display: flex;
+     justify-content: space-between;
+     padding-top: 9%;
+}
+.fotnavppptop {
+     padding-left: 10px;
+     padding-top: 5px;
+}
+.navfootfootsec p {
+     font-size: 15px;
+}
+.navfootfootsec span {
+     font-size: 13px;
+}
+#fotnavparaaa0 {
+     padding-top: 5.3%;
 }
