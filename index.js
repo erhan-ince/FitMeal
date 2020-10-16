@@ -16,17 +16,6 @@ require('dotenv').config()
 
 // Isabelle
 
-let maxCalories
-let minProtein
-let maxFat
-let maxCarbs
-let maxProtein
-let query_eiweiss
-let query_allergene
-let query_typ
-let query_eigenschaft
-
-
 let gender
 let age
 let size
@@ -73,48 +62,6 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use('/auth', authRoutes);
 app.use('/profile', profileRoutes);
-// app.get('/', (req, res) => {
-//     fetch(
-//          "https://api.spoonacular.com/recipes/complexSearch?type=type&apiKey=84fe766ead804aee905fa97fc4f9ead9"
-//     )
-//     .then((res) => res.json())
-//     .then((json) => res.render('index', { APIData: json.results }));
-// });
-// app.get('/', (req, res) => {
-//     fetch(
-//          "https://api.spoonacular.com/recipes/complexSearch?type=type&apiKey=84fe766ead804aee905fa97fc4f9ead9"
-//     )
-//     .then((res) => res.json())
-//     .then((json) => res.render('index', { APIData2: json.results }));
-// });
-
-// Isabelle
-
-// app.get('/', (req, res) => {
-//      fetch(`https://api.spoonacular.com/recipes/findByNutrients?maxCalories=${maxCalories}&minProtein=${minProtein}&maxFat=${maxFat}&maxCarbs=${maxCarbs}&maxProtein=${maxProtein}&number=10&apiKey=${process.env.apiKey}`)
-//          .then(res => res.json())
-//          .then(json => {
-//               data = json;
-//               console.log(data)
-//           //     res.send(data)
-//              res.status(200).render('index', {  })
-//          })
-//          .catch(err => console.log(err))
-// })
-
-// fetch(`https://api.spoonacular.com/food/search?query=${query_eiweiss} ${query_allergene} ${query_typ} ${query_eigenschaft}&number=2&apiKey=${process.env.apiKey}`)
-
-// app.get('/', (req, res) => {
-//      fetch(`https://api.spoonacular.com/food/search?query=chicken&number=2&apiKey=${process.env.apiKey}`)
-//          .then(res => res.json())
-//          .then(json => {
-//               data = json;
-//               console.log(data)
-//           //     res.send(data)
-//              res.status(200).render('index', {  })
-//          })
-//          .catch(err => console.log(err))
-// })
 
 app.get('/', (req, res) => {
      res.status(200).render('index')
@@ -128,83 +75,64 @@ app.get('/products', (req, res) => {
           .catch((err) => console.log(err));
 });
 
+// Filter-----------------------------
 
 app.post("/filter", (req, res) => {
      console.log(req.body)
-     if (req.body.ziel=="abnehmen") {
-          maxCalories = 700
-     } else {
-          maxCalories=3000
-     }
-     if (req.body.ziel=="muskel") {
-          minProtein = 30
-     } else {
-          minProtein = 0
-     }
-     if (req.body.ziel=="gesund") {
-          maxFat = 5;
-          maxCarbs = 100;
-          maxProtein = 5;
-          maxCalories = 1000
-     } else {
-          maxFat = 50;
-          maxCarbs = 300;
-          maxProtein = 50;
-          maxCalories = 3000
-     }
-     query_category = req.body.category
-     query_allergene = req.body.allergene
-     query_typ = req.body.typ
-     query_eigenschaft = req.body.eigenschaft
-     
-     console.log("maxCalories: " + maxCalories, "minProtein: " + minProtein, "maxFat: " + maxFat, "maxCarbs: " + maxCarbs, "maxProtein: " + maxProtein)
-     console.log("eiweiss: " + query_category)
-     console.log("allergene: " + query_allergene)
-     console.log("typ: " + query_typ)
-     console.log("eingenschaft: " + query_eigenschaft)
+
+     console.log("Kategorie: " + req.body.category)
+     console.log("Allergene: " + req.body.allergene)
+     console.log("Typ: " + req.body.type)
+     console.log("Eingenschaft: " + req.body.properties)
 
 
-     res.redirect(`/filter/${req.body.ziel}/${req.body.category}/${req.body.allergene}/${req.body.typ}/${req.body.eigenschaft}`)
+     res.redirect(`/filter/${req.body.category}/${req.body.allergene}/${req.body.type}/${req.body.properties}`)
 })
 
-app.get('/filter/:id1/:id2/:id3/:id4/:id5', (req, res) => {
-     console.log(`search query ` + req.params)
-     res.send(req.params)
-     if (req.params.id1 == "abnehmen") {
+app.get('/filter/:id1/:id2/:id3/:id4', (req, res) => {
+     // console.log(`search query ` + req.params)
+     // res.send(req.params)
+     if (req.params.id2 == "keine Allergene") {
           Meal.find({
-               calories: { $lte: 700 },
-               category: "req.params.id2",
-               allergene: "req.params.id3",
-               type: "req.params.id4",
-               properties: "req.params.id5"
+               category: req.params.id1,
+               type: req.params.id3,
+               properties: req.params.id4
           })
-          .then(result => {
-               console.log(result)
-               res.send(result)
+               .then(result => {
+                    console.log(result)
+                    res.status(200).render('results', {meals: result})
+               })
+               .catch(err => console.log(err))
+          
+     } else  {
+          Meal.find({
+               category: req.params.id1,
+               allergene: req.params.id2,
+               type: req.params.id3,
+               properties: req.params.id4
           })
-          .catch(err => console.log(err))
-     } else {
-          console.log(test)
-          // Meal.find({ calories: { $gt: 700 } })
-          // .then(result => {
-          //      console.log(result)
-          //      res.send(result)
-          // })
-          // .catch(err => console.log(err))
+               .then(result => {
+                    console.log(result)
+                    res.status(200).render('results', {meals: result})
+               })
+               .catch(err => console.log(err))
      }
- 
-     // companyProfile.find({ company_name: { $regex: new RegExp(req.params.id, 'i') } })
-     //     .then(result => {
-     //         res.render('companyProfileList', { profileData: result })
-     //     })
-     //     .catch(err => console.log(err))
+     // Meal.find({
+     //      category: req.params.id1,
+     //      allergene: req.params.id2,
+     //      type: req.params.id3,
+     //      properties: req.params.id4
+     // })
+     //      .then(result => {
+     //           console.log(result)
+     //           res.status(200).render('results', {meals: result})
+     //      })
+     //      .catch(err => console.log(err))
+
  })
 
-// min protein muskelaufbau: 30g
-// max calories abnehmen: 700 cal
-// protein cal carb fat gesund leben: fat max. 5g, carb max. 100g, protein max. 5g, cal max. 1000 cal
 
-// diet parameter: vegan
+// Kalorienrechner---------------------
 
 app.post('/rechner', (req, res) => {
      console.log(req.body)

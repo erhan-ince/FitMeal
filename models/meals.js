@@ -11,10 +11,10 @@ const mealSchema = new Schema({
     fat: Number,
     carbs: Number,
     price: Number,
-    category: String, // Huhn, Rind, Vegan, Fisch
-    allergene: String, // glutenfrei, laktosefrei, ohen Nüsse
+    category: String, // Huhn, Rind, Vegan, Fisch, Appetizer
+    allergene: String, // glutenfrei, laktosefrei, ohne Nüsse
     type: String, // Snack oder Gericht
-    properties: String, //low carb, high protein, high carb
+    properties: String, //low carb, high protein, high carb, low calories
   
 },     { collection: 'meals' }
 );
