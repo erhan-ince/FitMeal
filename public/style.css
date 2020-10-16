@@ -240,9 +240,9 @@ ul {
 /* Kalorienrechner */
 
 .rechner {
-     background: url("palmtrees.png") center/cover no-repeat;
+     background: url('palmtrees.png') center/cover no-repeat;
      margin: 15%;
-     padding: 4em
+     padding: 4em;
 }
 .rechner h1 {
      text-align: center;
@@ -427,34 +427,33 @@ a:hover {
 }
 #fotnavparaaa0 {
      padding-top: 5.3%;
-     width: 20px
+     /* width: 20px; */
 }
 
 .rechner_icon_small {
-     width: 40px
+     width: 40px;
 }
 .bicycle {
-     width: 30px
+     width: 30px;
 }
 .rechner_container {
      display: flex;
      align-items: center;
      padding-top: 1em;
      padding-bottom: 1em;
-
 }
 .rechner_container h3 {
      padding-left: 0.5em;
 }
 #rechner_btn {
      width: 100%;
-    height: 7.1vh;
-    padding: 1%;
-    background: #65C770;
-    border: none;
-    color: white;
-    font-size: 16px;
-    margin-top: 1em
+     height: 7.1vh;
+     padding: 1%;
+     background: #65c770;
+     border: none;
+     color: white;
+     font-size: 16px;
+     margin-top: 1em;
 }
 
 #info {
@@ -462,14 +461,14 @@ a:hover {
 }
 
 #info div {
-     margin-right: 1.5em
+     margin-right: 1.5em;
 }
 .gender {
      display: flex;
      align-items: center;
 }
 .gender label {
-     padding-left: 0.2em
+     padding-left: 0.2em;
 }
 .result {
      display: flex;
@@ -477,27 +476,26 @@ a:hover {
      align-items: baseline;
 }
 #rate {
-     color: #65C770;
+     color: #65c770;
 }
 /*.....abdulhaq.....sec1*/
-.abdulsectparagrid{
-     background: #F8F5F2;
-
+.abdulsectparagrid {
+     background: #f8f5f2;
 }
-.abdulsect3dive{
+.abdulsect3dive {
      height: 55vh;
-     background: #F8F5F2;
+     background: #f8f5f2;
 }
-#abdulhadh3{
-   display: flex;
-   justify-content: center;
-   padding-top: 3%;
+#abdulhadh3 {
+     display: flex;
+     justify-content: center;
+     padding-top: 3%;
 }
-#abdulhadh2{
+#abdulhadh2 {
      display: flex;
      justify-content: center;
      padding-top: 1%;
-     color: #65C770;
+     color: #65c770;
      font-size: 2em;
 }
 .ergebnis h1 {
@@ -521,44 +519,44 @@ a:hover {
     align-items: center;
 }
 /*----bordernsection-----*/
-.abdulbordersgrid1{
-     border: #ffffff 1px solid ;
+.abdulbordersgrid1 {
+     border: #ffffff 1px solid;
      width: 17vw;
      height: 40vh;
      background: #ffffff;
 }
-.abdulgruneborderzw{
-     border: #65C770 1px solid;
+.abdulgruneborderzw {
+     border: #65c770 1px solid;
      width: 5vw;
      height: 10vh;
-     background: #65C770;
+     background: #65c770;
      transform: translateY(-50%);
      margin-left: 33%;
 }
-.abdulbordersgrid2{
-     border: #ffffff 1px solid ;
+.abdulbordersgrid2 {
+     border: #ffffff 1px solid;
      width: 17vw;
      height: 44vh;
      background: #ffffff;
 }
-.abdulbordersgrid3{
-     border: #ffffff 1px solid ;
+.abdulbordersgrid3 {
+     border: #ffffff 1px solid;
      width: 17vw;
      height: 40vh;
      background: #ffffff;
 }
-.abdulsect3dive{
+.abdulsect3dive {
      display: flex;
      justify-content: space-between;
      padding-top: 10%;
      padding-left: 23%;
      padding-right: 23%;
 }
-.abdulh2zwbor{
-     color: #0A3847;
+.abdulh2zwbor {
+     color: #0a3847;
      padding-left: 24%;
 }
-.abdulparpar1{
+.abdulparpar1 {
      padding-top: 5%;
      padding-left: 15%;
      width: 70%;
@@ -566,26 +564,24 @@ a:hover {
      color: #666666;
      font-size: 14px;
 }
-.abdulparpar2{
+.abdulparpar2 {
      padding-top: 5%;
      padding-left: 15%;
      width: 70%;
-     text-align: left;  
+     text-align: left;
      color: #666666;
      font-size: 14px;
-
 }
-.abdulparpar3{
+.abdulparpar3 {
      padding-top: 9%;
      padding-left: 15%;
      width: 70%;
-     text-align: left;  
+     text-align: left;
      color: #666666;
      font-size: 14px;
-
 }
 /*--neusection--sec2-*/
-.abdulsecinfosflex{
+.abdulsecinfosflex {
      display: flex;
      justify-content: space-between;
      padding-left: 15%;
@@ -593,122 +589,121 @@ a:hover {
      padding-top: 4%;
      background: #fbf9f7;
 }
-.abduldivgredinfos11 p{
+.abduldivgredinfos11 p {
      width: 58%;
      padding-top: 14%;
 }
-.abduldivgredinfos22{
+.abduldivgredinfos22 {
      border-left: black 3px solid;
      height: 31vh;
      padding-right: 23%;
 }
-.abankabdulank{
+.abankabdulank {
      text-decoration: none;
-     color: #1574F5;
+     color: #1574f5;
 }
-.abduldivgredinfos33{
+.abduldivgredinfos33 {
      border: black 3px solid;
      border-radius: 10px;
      width: 20vw;
      height: 30vh;
 }
-.abduldillon2{
+.abduldillon2 {
      display: flex;
      justify-content: space-between;
      padding-top: 4%;
 }
-.abdulinna1{
+.abdulinna1 {
      display: flex;
-     justify-content: space-between; 
+     justify-content: space-between;
      padding-top: 4%;
-
 }
-.abduldivgredinfos33 h2{
+.abduldivgredinfos33 h2 {
      padding-top: 8%;
      padding-left: 10%;
 }
-.textscheibe{
+.textscheibe {
      padding-right: 30%;
      padding-top: 6%;
 }
-.abduldillon2 img{
+.abduldillon2 img {
      padding-left: 5%;
 }
-.abdulinna1 img{
+.abdulinna1 img {
      padding-left: 5%;
 }
 /*--neusection--sec3-*/
-.abdulsecnavbtwen3{
+.abdulsecnavbtwen3 {
      background: #fbf9f7;
 }
-.abdulsecnavbtwen3 h4{
+.abdulsecnavbtwen3 h4 {
      display: flex;
      justify-content: center;
      padding-top: 3%;
 }
-.abdulsecnavbtwen3 h2{
+.abdulsecnavbtwen3 h2 {
      display: flex;
      justify-content: center;
      padding-top: 1%;
-     color: #65C770;
+     color: #65c770;
 }
-.abdulullibtwen{
+.abdulullibtwen {
      display: flex;
      justify-content: space-between;
      padding-top: 3%;
      padding-left: 15%;
      padding-right: 28%;
 }
-.abdulullibtwen li{
+.abdulullibtwen li {
      list-style: none;
 }
-.abdulullibtwen li a{
+.abdulullibtwen li a {
      text-decoration: none;
-     color: #0A3847;
+     color: #0a3847;
 }
-#abduljustcolor{
-     color: #65C770;
+#abduljustcolor {
+     color: #65c770;
 }
-.abdulborderbottomsec3{
-     border-bottom: #CFCAC4 2px solid;
+.abdulborderbottomsec3 {
+     border-bottom: #cfcac4 2px solid;
      padding-top: 3%;
      width: 68%;
      margin-left: 13%;
 }
 /*--neusection--sec4-*/
-.abdulsec4textsec{
+.abdulsec4textsec {
      background: #fbf9f7;
      height: 74vh;
 }
-.abdulsec4textsec h2{
+.abdulsec4textsec h2 {
      padding-top: 3%;
      display: flex;
      justify-content: center;
      color: #454545;
 }
-.abdulsec4textsec p{
+.abdulsec4textsec p {
      padding-top: 2%;
      display: flex;
      justify-content: center;
-     color: #2B2A2A;
+     color: #2b2a2a;
      text-align: center;
      width: 70%;
      padding-left: 13%;
      font-size: 15px;
 }
 /*--neusection--sec5-*/
-.abdulletztesecforfooter{
+.abdulletztesecforfooter {
      background: url('/foterbackground.png');
      height: 32vh;
 }
-.abdulletztesecforfooter{
+.abdulletztesecforfooter {
      display: flex;
      justify-content: space-between;
      padding-top: 4%;
      padding-left: 1%;
      padding-right: 1%;
 }
-.abduldivfoterflexmitbilder2{
+.abduldivfoterflexmitbilder2 {
      width: 40%;
      font-size: 1.5em;
      color: white;
@@ -716,61 +711,60 @@ a:hover {
      text-align: center;
      word-spacing: 3px;
 }
-#abdulphotoRectangle33{
+#abdulphotoRectangle33 {
      padding-left: 15%;
 }
 /*------abdulhaq,hinweise------*/
-#abduparaaa1{
+#abduparaaa1 {
      padding-top: 5%;
      padding-left: 17%;
      width: 57vw;
-     color: #2B2A2A;
+     color: #2b2a2a;
      font-size: 15px;
 }
-#abduparaaa2{
+#abduparaaa2 {
      padding-top: 2%;
      padding-left: 17%;
      width: 66vw;
-     color: #2B2A2A;
+     color: #2b2a2a;
      font-size: 15px;
 }
-.abduHaa123{
+.abduHaa123 {
      padding-top: 2%;
      padding-left: 17%;
      color: #454545;
-
 }
-#abduparaaa3{
+#abduparaaa3 {
      padding-top: 2%;
      padding-left: 17%;
      width: 60vw;
-     color: #2B2A2A;
+     color: #2b2a2a;
      font-size: 15px;
 }
-#abduparaaa4{
+#abduparaaa4 {
      padding-top: 2%;
      padding-left: 17%;
      width: 58vw;
-     color: #2B2A2A;
+     color: #2b2a2a;
      font-size: 15px;
 }
-.abduparaaa5und6{
+.abduparaaa5und6 {
      padding-top: 1%;
      padding-left: 20%;
-     color: #2B2A2A;
-     font-size: 14px;   
+     color: #2b2a2a;
+     font-size: 14px;
 }
-#abduparaaa7{
+#abduparaaa7 {
      padding-top: 2%;
      padding-left: 17%;
      width: 58vw;
-     color: #2B2A2A;
+     color: #2b2a2a;
      font-size: 15px;
 }
-#abduparaaa8{
+#abduparaaa8 {
      padding-top: 2%;
      padding-left: 17%;
      width: 58vw;
-     color: #2B2A2A;
+     color: #2b2a2a;
      font-size: 15px;
 }
