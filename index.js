@@ -8,6 +8,7 @@ const app = express();
 const profileRoutes = require('./routes/profileRoutes');
 const keys = require('./config/keys')
 const Meal = require('./models/meals');
+const Newsletter = require('./models/newsletter');
 
 const fetch = require('node-fetch');
 
@@ -198,6 +199,21 @@ app.post('/newData', (req, res) => {
           .then((result) => {
                console.log('new food saved');
                res.redirect('./form');
+          })
+          .catch((err) => console.log(err));
+});
+
+
+// ----------------------Newsletter---------------------
+app.post('/newsletter', (req, res) => {
+     const newNewsletter = new Newsletter({
+          email: req.body.email,
+     });
+     newNewsletter
+          .save()
+          .then((result) => {
+               console.log('new mail saved');
+               res.redirect('./');
           })
           .catch((err) => console.log(err));
 });

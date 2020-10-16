@@ -116,6 +116,15 @@ ul {
      margin: 10px;
 }
 /* ---------------------------------Die Leckersten Produkte-------------------------- */
+.EFitmealGerichte {
+     font-family: Roboto;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 31px;
+     line-height: 45px;
+     color: #454545;
+     padding-left: 1.1rem;
+}
 .EgreenText {
      text-align: center;
      margin-top: 5%;
@@ -164,11 +173,45 @@ ul {
 }
 .EgerichteKategorien img {
      width: 100%;
-     height: 40vh;
+     height: 50vh;
 }
 .Epreis {
      display: flex;
      justify-content: space-between;
+     padding: 0.5rem 0.5rem;
+}
+.Epreis h5 {
+     font-family: Roboto;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 13px;
+     line-height: 24px;
+     /* identical to box height, or 185% */
+
+     text-transform: uppercase;
+
+     color: #454545;
+}
+.Epreis h4 {
+     font-family: Roboto;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 18px;
+     line-height: 26px;
+     /* identical to box height, or 144% */
+
+     text-align: center;
+
+     color: #5c5b5b;
+}
+.ESofort p {
+     font-family: Roboto;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 12px;
+     line-height: 24px;
+     color: #43ba70;
+     padding: 0.5rem 0.5rem;
 }
 .EBorderBottom {
      display: flex;
@@ -178,6 +221,7 @@ ul {
 .EBorderBottom h1 {
      border-bottom: 1px solid grey;
      width: 70%;
+     margin-left: 1rem;
 }
 .EBorderBottom {
      padding-right: 20px;
@@ -190,6 +234,61 @@ ul {
 .EWarenkorb {
      display: flex;
      flex-direction: column;
+     padding-right: 3rem;
+     padding-bottom: 0.4rem;
+}
+.Warenkorb {
+     font-family: Roboto;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 13px;
+     line-height: 17px;
+     text-align: center;
+     text-transform: uppercase;
+     color: #ffffff;
+     background: #65c770;
+     border-radius: 0px;
+     width: 13vw;
+     height: 44px;
+}
+.Epeople {
+     background: #ffffff;
+     border: 1px solid #e2e2e2;
+     box-sizing: border-box;
+     border-radius: 0px;
+     width: 68px;
+     height: 4vh;
+}
+button {
+     width: 3.5vw;
+     height: 4vh;
+}
+.werte {
+     display: flex;
+     flex-direction: column;
+}
+.calorie {
+     display: flex;
+     justify-content: space-around;
+     padding-top: 1rem;
+}
+.calorie p {
+     background-color: #454545;
+     color: white;
+     width: 2.5vw;
+     text-align: center;
+}
+.Ecal {
+     display: flex;
+     justify-content: space-around;
+     text-align: center;
+     padding-top: 0.5rem;
+}
+.EwidthCal {
+     width: 20vw;
+}
+.EimgProducts {
+     /* height: 100vh; */
 }
 /* -----------------------------Login-------------------------------- */
 .login-with-google-btn {
@@ -499,24 +598,24 @@ a:hover {
      font-size: 2em;
 }
 .ergebnis h1 {
-     margin-top: 1em
+     margin-top: 1em;
 }
 .ergebnis {
-     margin-bottom: 1em
+     margin-bottom: 1em;
 }
 
 .ergebnis a {
-    padding: 1%;
-    background: #65C770;
-    color: white;
-    font-size: 16px;
-    margin-top: 2em;
-    text-decoration: none;
-    display: inline-block;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+     padding: 1%;
+     background: #65c770;
+     color: white;
+     font-size: 16px;
+     margin-top: 2em;
+     text-decoration: none;
+     display: inline-block;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
 }
 /*----bordernsection-----*/
 .abdulbordersgrid1 {
@@ -768,49 +867,103 @@ a:hover {
      color: #2b2a2a;
      font-size: 15px;
 }
-/*------abdulhaq,hinweise2------*/
-.abdultexth2hin{
+/*------abdulhaq,hinweise1------*/
+#abduparaaa1 {
+     padding-top: 5%;
+     padding-left: 17%;
+     width: 57vw;
+     color: #2b2a2a;
+     font-size: 15px;
+}
+#abduparaaa2 {
+     padding-top: 2%;
+     padding-left: 17%;
+     width: 66vw;
+     color: #2b2a2a;
+     font-size: 15px;
+}
+.abduHaa123 {
      padding-top: 2%;
      padding-left: 17%;
      color: #454545;
 }
-.abdulparahinwe1{
+#abduparaaa3 {
+     padding-top: 2%;
+     padding-left: 17%;
+     width: 60vw;
+     color: #2b2a2a;
+     font-size: 15px;
+}
+#abduparaaa4 {
+     padding-top: 2%;
+     padding-left: 17%;
+     width: 58vw;
+     color: #2b2a2a;
+     font-size: 15px;
+}
+.abduparaaa5und6 {
+     padding-top: 1%;
+     padding-left: 20%;
+     color: #2b2a2a;
+     font-size: 14px;
+}
+#abduparaaa7 {
+     padding-top: 2%;
+     padding-left: 17%;
+     width: 58vw;
+     color: #2b2a2a;
+     font-size: 15px;
+}
+#abduparaaa8 {
+     padding-top: 2%;
+     padding-left: 17%;
+     width: 58vw;
+     color: #2b2a2a;
+     font-size: 15px;
+}
+/*------abdulhaq,hinweise2------*/
+.abdultexth2hin {
+     padding-top: 2%;
+     padding-left: 17%;
+     color: #454545;
+}
+.abdulparahinwe1 {
      padding-top: 3%;
      padding-left: 17%;
-     color: #2B2A2A;
+     color: #2b2a2a;
 }
-.abdulparahinwe2{
+.abdulparahinwe2 {
      padding-top: 2%;
      padding-left: 17%;
-     color: #2B2A2A;
+     color: #2b2a2a;
 }
-.abdulparahinwe3{
+.abdulparahinwe3 {
      padding-top: 2%;
      padding-left: 17%;
-     color: #2B2A2A;  
+     color: #2b2a2a;
 }
-.abdulparahinwe4{
+.abdulparahinwe4 {
      padding-top: 2%;
      padding-left: 17%;
-     color: #2B2A2A;     
+     color: #2b2a2a;
 }
-.abdulparahinwe5{
+.abdulparahinwe5 {
      padding-top: 2%;
      padding-left: 17%;
-     color: #2B2A2A;     
-}   
-.abdulparahinwe6{
+     color: #2b2a2a;
+}
+.abdulparahinwe6 {
      padding-top: 2%;
      padding-left: 17%;
-     color: #2B2A2A;    
+     color: #2b2a2a;
 }
-.abdulparahinwe7{
+.abdulparahinwe7 {
      padding-top: 2%;
      padding-left: 17%;
-     color: #2B2A2A;     
+     color: #2b2a2a;
 }
-.abdulparahinwe8{
+.abdulparahinwe8 {
      padding-top: 3%;
      padding-left: 17%;
-     color: #2B2A2A;   
+     color: #2b2a2a;
 }

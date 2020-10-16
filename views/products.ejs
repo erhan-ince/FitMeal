@@ -11,7 +11,7 @@
     <section class="EGerichte">
         <% meals.forEach(element => { %>
             <div class="EgerichteKategorien">
-                <img src="<%= element.image %>" alt="">
+                <img class="EimgProducts" src="<%= element.image %>" alt="">
                 <div class="Epreis">
                      <h5><%= element.title %></h5>
                      <h4><%= element.price %></h4>
@@ -20,6 +20,7 @@
                      <h1></h1>
                      <h6>(€Inf/kg)</h6>
                 </div>
+                <article class="EwidthCal">
                 <div class="werte">
                     <div class="calorie">
                     <p><%= element.calories %></p>
@@ -34,16 +35,20 @@
                     <p>FAT</p>
                     </div>
                 </div>
-
+                </article>
                 <div class="ESofort">
-                     <p>sofort Lieferbar</p>
-                     <div class="EWarenkorb">
-                          <input type="number" name="number" id="number">
-                          <input type="submit" value="IN DEN WARENKORB">
-                     </div>
-                </div>
-            </div>      
-        <% }) %>
+                    <p>sofort Lieferbar</p>
+                    <div class="EWarenkorb">
+                         <div class="buttons">
+                              <button>-</button>
+                         <input class="Epeople" type="number" name="number" id="number">
+                         <button onchange="">+</button>
+                         </div>
+                         <input class="Warenkorb" type="submit" value="IN DEN WARENKORB">
+                    </div>
+               </div>
+          </div>
+<% }) %>
     </section>
     <%-include('./partials/footer')%>
 
