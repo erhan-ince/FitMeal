@@ -26,6 +26,7 @@ let query_allergene
 let query_typ
 let query_eigenschaft
 
+
 let gender
 let age
 let size
@@ -41,8 +42,6 @@ let fat
 
 //
 
-
-// keys.mongodb.dbURI
 
 mongoose
      .connect(keys.mongodb.dbURI, { useNewUrlParser: true, useUnifiedTopology: true,useFindAndModify:false })
@@ -105,17 +104,22 @@ app.use('/profile', profileRoutes);
 
 // fetch(`https://api.spoonacular.com/food/search?query=${query_eiweiss} ${query_allergene} ${query_typ} ${query_eigenschaft}&number=2&apiKey=${process.env.apiKey}`)
 
+// app.get('/', (req, res) => {
+//      fetch(`https://api.spoonacular.com/food/search?query=chicken&number=2&apiKey=${process.env.apiKey}`)
+//          .then(res => res.json())
+//          .then(json => {
+//               data = json;
+//               console.log(data)
+//           //     res.send(data)
+//              res.status(200).render('index', {  })
+//          })
+//          .catch(err => console.log(err))
+// })
+
 app.get('/', (req, res) => {
-     fetch(`https://api.spoonacular.com/food/search?query=chicken&number=2&apiKey=${process.env.apiKey}`)
-         .then(res => res.json())
-         .then(json => {
-              data = json;
-              console.log(data)
-          //     res.send(data)
-             res.status(200).render('index', {  })
-         })
-         .catch(err => console.log(err))
+     res.status(200).render('index')
 })
+
 app.get('/products', (req, res) => {
      Meal.find()
           .then((result) => {
@@ -148,21 +152,53 @@ app.post("/filter", (req, res) => {
           maxProtein = 50;
           maxCalories = 3000
      }
-     query_eiweiss = req.body.eiweiss
+     query_category = req.body.category
      query_allergene = req.body.allergene
      query_typ = req.body.typ
      query_eigenschaft = req.body.eigenschaft
      
-
      console.log("maxCalories: " + maxCalories, "minProtein: " + minProtein, "maxFat: " + maxFat, "maxCarbs: " + maxCarbs, "maxProtein: " + maxProtein)
-     console.log("eiweiss: " + query_eiweiss)
+     console.log("eiweiss: " + query_category)
      console.log("allergene: " + query_allergene)
      console.log("typ: " + query_typ)
      console.log("eingenschaft: " + query_eigenschaft)
 
 
-     res.redirect(`/filter/${req.body.ziel}/${req.body.eiweiss}/${req.body.allergene}/${req.body.type}/${req.body.eigenschaft}`)
+     res.redirect(`/filter/${req.body.ziel}/${req.body.category}/${req.body.allergene}/${req.body.typ}/${req.body.eigenschaft}`)
 })
+
+app.get('/filter/:id1/:id2/:id3/:id4/:id5', (req, res) => {
+     console.log(`search query ` + req.params)
+     res.send(req.params)
+     if (req.params.id1 == "abnehmen") {
+          Meal.find({
+               calories: { $lte: 700 },
+               category: "req.params.id2",
+               allergene: "req.params.id3",
+               type: "req.params.id4",
+               properties: "req.params.id5"
+          })
+          .then(result => {
+               console.log(result)
+               res.send(result)
+          })
+          .catch(err => console.log(err))
+     } else {
+          console.log(test)
+          // Meal.find({ calories: { $gt: 700 } })
+          // .then(result => {
+          //      console.log(result)
+          //      res.send(result)
+          // })
+          // .catch(err => console.log(err))
+     }
+ 
+     // companyProfile.find({ company_name: { $regex: new RegExp(req.params.id, 'i') } })
+     //     .then(result => {
+     //         res.render('companyProfileList', { profileData: result })
+     //     })
+     //     .catch(err => console.log(err))
+ })
 
 // min protein muskelaufbau: 30g
 // max calories abnehmen: 700 cal
@@ -237,5 +273,6 @@ app.post('/newData', (req, res) => {
           })
           .catch((err) => console.log(err));
 });
+
 
 
