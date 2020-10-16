@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Fit Meal</title>
+</head>
+<body>
+    <%-include('./partials/header')%>
+    <section class="EGerichte">
+        <% meals.forEach(element => { %>
+            <div class="EgerichteKategorien">
+                <img src="<%= element.image %>" alt="">
+                <div class="Epreis">
+                     <h5><%= element.title %></h5>
+                     <h4><%= element.price %></h4>
+                </div>
+                <div class="EBorderBottom">
+                     <h1></h1>
+                     <h6>(€Inf/kg)</h6>
+                </div>
+                <div class="werte">
+                    <div class="calorie">
+                    <p><%= element.calories %></p>
+                    <p><%= element.protein %></p>
+                    <p><%= element.carbs %></p>
+                    <p><%= element.fat %></p>
+                    </div> 
+                     <div class="Ecal">
+                    <p>CAL</p>
+                    <p>Protein</p>
+                    <p>CARBS</p>
+                    <p>FAT</p>
+                    </div>
+                </div>
+
+                <div class="ESofort">
+                     <p>sofort Lieferbar</p>
+                     <div class="EWarenkorb">
+                          <input type="number" name="number" id="number">
+                          <input type="submit" value="IN DEN WARENKORB">
+                     </div>
+                </div>
+            </div>      
+        <% }) %>
+    </section>
+    <%-include('./partials/footer')%>
+
+  </body>
+</html>

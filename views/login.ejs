@@ -11,18 +11,14 @@
      </head>
 
      <body>
-          <nav>
-               <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/auth/login">Login</a></li>
-                    <li><a href="/auth/logout">Logout</a></li>
-                    <li><a href="/profile/">Profil</a></li>
-               </ul>
-          </nav>
+          <%-include('./partials/header')%>
+
           <section>
                <a href="/auth/google" class="login-with-google-btn">
                     Sign in with Google
                </a>
           </section>
+          <%-include('./partials/footer')%>
+
      </body>
 </html>

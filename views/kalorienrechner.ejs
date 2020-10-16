@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <section class="rechner">
+        <h1> FITTASTE KALORIENRECHNER</h1>
+
+        <form action="/rechner" method="POST">
+            <div class="rechner_container">
+                <img class="rechner_icon_big" src="/gender.png" alt="">
+                <h3>GESCHLECHT</h3>
+            </div>
+            <div class="gender">
+                <input type="radio" id="" name="gender" value="weiblich" <%= gender=="weiblich"? 'checked':'' %>>
+                <label for=""> Weiblich</label>
+                <img class="rechner_icon_small" src="/female.png" alt="">
+            </div>
+            <div class="gender">
+                <input type="radio" id="" name="gender" value="männlich" <%= gender=="männlich"? 'checked':'' %>>
+                <label for=""> Männlich</label>
+                <img class="rechner_icon_small" src="/male.png" alt="">
+            </div>
+
+            <div class="rechner_container">
+                <img class="rechner_icon_big" src="/person.png" alt="">
+                <h3>PERSÖNLICHE INFORMATIONEN</h3>
+            </div>
+            <div id="info">
+                <div>
+                    <h3>Alter</h3>
+                    <input type="text" name="age" id="" placeholder="<%= age %>">
+                </div>
+                <div>
+                    <h3>Körpergrösse</h3>
+                    <input type="text" name="size" id="" placeholder="<%= size %>">
+                </div>
+                <div>
+                    <h3>Gewicht</h3>
+                    <input type="text" name="weight" id="" placeholder="<%= weight %>">
+                </div>
+            </div>
+
+
+            <div class="rechner_container">
+                <img class="bicycle" src="/bicycle.png" alt="">
+                <h3>KÖRPERLICHE AKTIVITÄT</h3>
+            </div>
+            <input type="radio" id="" name="activity" value="1.20" <%= activity=="1.20"? 'checked':'' %>>
+            <label for=""> kaum aktiv</label>
+            <a href=""><img class="rechner_icon_big" src="/information.png" alt=""></a><br>
+            <input type="radio" id="" name="activity" value="1.37" <%= activity=="1.37"? 'checked':'' %>>
+            <label for=""> leicht aktiv</label>
+            <a href=""><img class="rechner_icon_big" src="/information.png" alt=""></a><br>
+            <input type="radio" id="" name="activity" value="1.55" <%= activity=="1.55"? 'checked':'' %>>
+            <label for=""> aktiv</label>
+            <a href=""><img class="rechner_icon_big" src="/information.png" alt=""></a><br>
+            <input type="radio" id="" name="activity" value="1.72" <%= activity=="1.72"? 'checked':'' %>>
+            <label for=""> sehr aktiv</label>
+            <a href=""><img class="rechner_icon_big" src="/information.png" alt=""></a><br>
+            <input type="radio" id="" name="activity" value="1.90" <%= activity=="1.90"? 'checked':'' %>>
+            <label for=""> profi Sportler</label>
+            <a href=""><img class="rechner_icon_big" src="/information.png" alt=""></a><br>
+
+            <div class="rechner_container">
+                <img class="rechner_icon_big" src="/dumbbell.png" alt="">
+                <h3>TRAININGSZIEL</h3>
+            </div>
+            <input type="radio" id="" name="training" value="abnehmen" <%= training=="abnehmen"? 'checked':'' %>>
+            <label for=""> Abnehmen</label><br>
+            <input type="radio" id="" name="training" value="gewicht_halten"
+                <%= training=="gewicht_halten"? 'checked':'' %>>
+            <label for=""> Gewicht halten</label><br>
+            <input type="radio" id="" name="training" value="muskelaufbau"
+                <%= training=="muskelaufbau"? 'checked':'' %>>
+            <label for=""> Muskelaufbau</label><br>
+        </form>
+        <article>
+            <div class="ergebnis">
+                <h1>DEIN ERGEBNIS</h1>
+                <div class="result">
+                    <div>
+                        <h3>DEIN KALORIENBEDARF</h3>
+                        <p id="rate"><%= need %> </p>
+                    </div>
+                    <div>
+                        <h3>DEIN GRUNDUMSATZ</h3>
+                        <p><%= rate %> </p>
+                    </div>
+                </div>
+            </div>
+            <div class="ergebnis">
+                <h1>MAKRONÄHRSTOFFE</h1>
+                <div class="result">
+                    <div>
+                        <h3>KOHLENHYDRATE</h3>
+                        <p><%= carbs %> g</p>
+                    </div>
+                    <div>
+                        <h3>EIWEISS</h3>
+                        <p><%= protein %> g</p>
+                    </div>
+                    <div>
+                        <h3>FETT</h3>
+                        <p><%= fat %> g</p>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+    </section>
+
+</body>
+
+</html>

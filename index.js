@@ -7,8 +7,12 @@ const passport = require('passport');
 const app = express();
 const profileRoutes = require('./routes/profileRoutes');
 const keys = require('./config/keys')
+const Meal = require('./models/meals');
 
 const fetch = require('node-fetch');
+
+// Isabelle
+require('dotenv').config()
 
 // Isabelle
 
@@ -22,14 +26,29 @@ let query_allergene
 let query_typ
 let query_eigenschaft
 
+let gender
+let age
+let size
+let weight
+let activity
+let training
+let rate
+let need
+let carbs
+let protein
+let fat
+
+
 //
 
+
+// keys.mongodb.dbURI
 
 mongoose
      .connect(keys.mongodb.dbURI, { useNewUrlParser: true, useUnifiedTopology: true,useFindAndModify:false })
      .then((result) => {
           console.log('db connected');
-          app.listen(3000, () => {
+          app.listen(3001, () => {
                console.log('listening at 3000');
           });
      })
@@ -87,7 +106,7 @@ app.use('/profile', profileRoutes);
 // fetch(`https://api.spoonacular.com/food/search?query=${query_eiweiss} ${query_allergene} ${query_typ} ${query_eigenschaft}&number=2&apiKey=${process.env.apiKey}`)
 
 app.get('/', (req, res) => {
-     fetch(`https://api.spoonacular.com/food/search?query=${query_eiweiss}&number=2&apiKey=${process.env.apiKey}`)
+     fetch(`https://api.spoonacular.com/food/search?query=chicken&number=2&apiKey=${process.env.apiKey}`)
          .then(res => res.json())
          .then(json => {
               data = json;
@@ -97,6 +116,13 @@ app.get('/', (req, res) => {
          })
          .catch(err => console.log(err))
 })
+app.get('/products', (req, res) => {
+     Meal.find()
+          .then((result) => {
+               res.render('products', { meals: result });
+          })
+          .catch((err) => console.log(err));
+});
 
 
 app.post("/filter", (req, res) => {
@@ -107,14 +133,14 @@ app.post("/filter", (req, res) => {
           maxCalories=3000
      }
      if (req.body.ziel=="muskel") {
-          minProtein = 25
+          minProtein = 30
      } else {
           minProtein = 0
      }
      if (req.body.ziel=="gesund") {
           maxFat = 5;
-          maxCarbs = 30;
-          maxProtein = 3;
+          maxCarbs = 100;
+          maxProtein = 5;
           maxCalories = 1000
      } else {
           maxFat = 50;
@@ -135,19 +161,81 @@ app.post("/filter", (req, res) => {
      console.log("eingenschaft: " + query_eigenschaft)
 
 
-     res.redirect("/")
+     res.redirect(`/filter/${req.body.ziel}/${req.body.eiweiss}/${req.body.allergene}/${req.body.type}/${req.body.eigenschaft}`)
 })
 
-app.get('/hinweise', (req, res) => {
-     res.render('hinweise')
-})
-
-// min protein muskelaufbau: 25g
+// min protein muskelaufbau: 30g
 // max calories abnehmen: 700 cal
-// protein cal carb fat gesund leben: fat max. 5g, carb max. 30g, protein max. 3g, cal max. 1000 cal
+// protein cal carb fat gesund leben: fat max. 5g, carb max. 100g, protein max. 5g, cal max. 1000 cal
 
 // diet parameter: vegan
 
+app.post('/rechner', (req, res) => {
+     console.log(req.body)
+     gender = req.body.gender
+     age = req.body.age
+     size = req.body.size
+     weight = req.body.weight
+     activity = req.body.activity
+     training = req.body.training
+     
+     res.status(200).redirect('/kalorienrechner')
+})
+
+app.get('/kalorienbedarf', (req, res) => {
+     res.status(200).render('kalorienbedarf', {})
+})
 
 
- 
+app.get('/kalorienrechner', (req, res) => {
+     if (gender == "weiblich") {
+          rate = ((Number(weight) * 10) + (Number(size) * 6.25) - (Number(age) * 5) - 161).toFixed()
+     } else {
+          rate = ((Number(weight) * 10) + (Number(size) * 6.25) - (Number(age) * 5) + 5).toFixed()
+     }
+     need = (Number(rate) * Number(activity)).toFixed()
+     if (training=="abnehmen") {
+          need = need - 300
+     } else if (training=="muskelaufbau") {
+          need = need + 300
+     }
+     else {
+          need = need
+     }
+     carbs = (need * 0.5 / 4).toFixed()
+     protein = (need * 0.25 / 4).toFixed()
+     fat = (need * 0.25 / 9).toFixed()
+     
+     console.log(rate, need, carbs, protein, fat)
+     res.status(200).render('kalorienrechner', {rate, need, carbs, protein, fat, gender, age, size, weight, activity, training})
+})
+
+//Form-----------------------------
+app.get('/form', (req, res) => {
+     res.render('form');
+});
+
+app.post('/newData', (req, res) => {
+     const newMeal = new Meal({
+          title: req.body.title,
+          image: req.body.image,
+          calories: req.body.calories,
+          protein: req.body.protein,
+          fat: req.body.fat,
+          carbs: req.body.carbs,
+          price: req.body.price,
+          category: req.body.category,
+          allergene: req.body.allergene,
+          type: req.body.type,
+          properties: req.body.properties,
+     });
+     newMeal
+          .save()
+          .then((result) => {
+               console.log('new food saved');
+               res.redirect('./form');
+          })
+          .catch((err) => console.log(err));
+});
+
+

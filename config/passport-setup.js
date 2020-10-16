@@ -2,17 +2,14 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const passport = require('passport');
 const User = require('../models/user');
 const keys = require('./keys')
-
 passport.serializeUser(function (user, done) {
      done(null, user);
 });
-
 passport.deserializeUser(function (id, done) {
      User.findById(id, function (err, user) {
           done(err, user);
      });
 });
-
 passport.use(
      new GoogleStrategy(
           {
@@ -22,7 +19,6 @@ passport.use(
           },
           (accessToken, refreshToken, profile, done) => {
                console.log(profile);
-
                User.find({ googleId: profile.id }).then((user) => {
                     console.log(user);
                     if (user.length > 0) {

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <section class="rechner">
+        <h1> FITTASTE KALORIENRECHNER</h1>
+
+        <form action="/rechner" method="POST">
+            <div class="rechner_container">
+                <img class="rechner_icon_big" src="/gender.png" alt="">
+                <h3>GESCHLECHT</h3>
+            </div>
+            <div class="gender">
+                <input type="radio" id="" name="gender" value="weiblich">
+                <label for="">Weiblich</label>
+                <img class="rechner_icon_small" src="/female.png" alt="">
+            </div>
+            <div class="gender">
+                <input type="radio" id="" name="gender" value="männlich">
+                <label for="">Männlich</label>
+                <img class="rechner_icon_small" src="/male.png" alt="">
+            </div>
+
+            <div class="rechner_container">
+                <img class="rechner_icon_big" src="/person.png" alt="">
+                <h3>PERSÖNLICHE INFORMATIONEN</h3>
+            </div>
+            <div id="info">
+                <div>
+                    <h3>Alter</h3>
+                    <input type="text" name="age" id="">
+                </div>
+                <div>
+                    <h3>Körpergrösse</h3>
+                    <input type="text" name="size" id="">
+                </div>
+                <div>
+                    <h3>Gewicht</h3>
+                    <input type="text" name="weight" id="">
+                </div>
+            </div>
+
+            <div class="rechner_container">
+                <img class="bicycle" src="/bicycle.png" alt="">
+                <h3>KÖRPERLICHE AKTIVITÄT</h3>
+            </div>
+            <input type="radio" id="" name="activity" value="1.20">
+            <label for=""> kaum aktiv</label>
+            <a href=""><img class="rechner_icon_big" src="/information.png" alt=""></a><br>
+            <input type="radio" id="" name="activity" value="1.37">
+            <label for=""> leicht aktiv</label>
+            <a href=""><img class="rechner_icon_big" src="/information.png" alt=""></a><br>
+            <input type="radio" id="" name="activity" value="1.55">
+            <label for=""> aktiv</label><a href=""><img class="rechner_icon_big" src="/information.png" alt=""></a><br>
+            <input type="radio" id="" name="activity" value="1.72">
+            <label for=""> sehr aktiv</label>
+            <a href=""><img class="rechner_icon_big" src="/information.png" alt=""></a><br>
+            <input type="radio" id="" name="activity" value="1.90">
+            <label for=""> profi Sportler</label>
+            <a href=""><img class="rechner_icon_big" src="/information.png" alt=""></a><br>
+
+            <div class="rechner_container">
+                <img class="rechner_icon_big" src="/dumbbell.png" alt="">
+                <h3>TRAININGSZIEL</h3>
+            </div>
+            <input type="radio" id="" name="training" value="abnehmen">
+            <label for=""> Abnehmen</label><br>
+            <input type="radio" id="" name="training" value="gewicht_halten">
+            <label for=""> Gewicht halten</label><br>
+            <input type="radio" id="" name="training" value="muskelaufbau">
+            <label for=""> Muskelaufbau</label><br>
+
+
+
+            <input id="rechner_btn" type="submit" value="Jetzt Kalorienbedarf berechnen">
+        </form>
+        <!-- <article>
+            <div class="ergebnis">
+                <h1>DEIN ERGEBNIS</h1>
+                <div>
+                    <h3>DEIN KALORIENBEDARF</h3>
+                    <p></p>
+                    <h3>DEIN GRUNDUMSATZ</h3>
+                    <p></p>
+                </div>
+            </div>
+            <div class="ergebnis">
+                <h1>MAKRONÄHRSTOFFE</h1>
+                <div>
+                    <h3>KOHLENHYDRATE</h3>
+                    <p></p>
+                    <h3>EIWEISS</h3>
+                    <p></p>
+                    <h3>FETT</h3>
+                    <p></p>
+                </div>
+            </div>
+
+        </article> -->
+    </section>
+
+</body>
+
+</html>
