@@ -165,7 +165,7 @@ ul {
 .EGerichte {
      display: grid;
      grid-template-columns: repeat(3, 1fr);
-     gap: 10px;
+     gap: 40px;
      padding: 20px 20px;
 }
 .EgerichteKategorien {
@@ -219,7 +219,7 @@ ul {
      padding-top: 20px;
 }
 .EBorderBottom h1 {
-     border-bottom: 1px solid grey;
+     border-bottom: 1px solid #d6d6d6;
      width: 70%;
      margin-left: 1rem;
 }
@@ -474,12 +474,12 @@ a:hover {
      font-size: 14px;
      padding-left: 20px;
 }
-#footernavsuche {
+.footernavsuche {
      width: 32vw;
      height: 5.2vh;
      padding-top: 1.6%;
 }
-#footernavsubmit {
+.footernavsubmit {
      width: 10vw;
      height: 7.1vh;
      padding-top: 1%;

@@ -37,7 +37,7 @@ mongoose
      .connect(keys.mongodb.dbURI, { useNewUrlParser: true, useUnifiedTopology: true,useFindAndModify:false })
      .then((result) => {
           console.log('db connected');
-          app.listen(3001, () => {
+          app.listen(3000, () => {
                console.log('listening at 3000');
           });
      })
@@ -208,7 +208,9 @@ app.post('/newData', (req, res) => {
 app.post('/newsletter', (req, res) => {
      const newNewsletter = new Newsletter({
           email: req.body.email,
+          
      });
+     console.log(newNewsletter)
      newNewsletter
           .save()
           .then((result) => {
