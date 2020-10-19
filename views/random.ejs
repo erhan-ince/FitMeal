@@ -1,56 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
     <title>Fit Meal</title>
 </head>
+
 <body>
     <%-include('./partials/header')%>
     <section class="EGerichte">
         <% meals.forEach(element => { %>
-            <div class="EgerichteKategorien">
-                <img class="EimgProducts" src="<%= element.image %>" alt="">
-                <div class="Epreis">
-                     <h5><%= element.title %></h5>
-                     <h4><%= element.price %></h4>
-                </div>
-                <div class="EBorderBottom">
-                     <h1></h1>
-                     <h6>(€Inf/kg)</h6>
-                </div>
-                <article class="EwidthCal">
+        <div class="EgerichteKategorien">
+            <img class="EimgProducts" src="<%= element.image %>" alt="">
+            <div class="Epreis">
+                <h5><%= element.title %></h5>
+                <h4><%= element.price %></h4>
+            </div>
+            <div class="EBorderBottom">
+                <h1></h1>
+                <h6>(€Inf/kg)</h6>
+            </div>
+            <article class="EwidthCal">
                 <div class="werte">
                     <div class="calorie">
-                    <p><%= element.calories %></p>
-                    <p><%= element.protein %></p>
-                    <p><%= element.carbs %></p>
-                    <p><%= element.fat %></p>
-                    </div> 
-                     <div class="Ecal">
-                    <p>CAL</p>
-                    <p>Protein</p>
-                    <p>CARBS</p>
-                    <p>FAT</p>
+                        <p><%= element.calories %></p>
+                        <p><%= element.protein %></p>
+                        <p><%= element.carbs %></p>
+                        <p><%= element.fat %></p>
+                    </div>
+                    <div class="Ecal">
+                        <p>Cal/</p>
+                        <p>Prot/</p>
+                        <p>Carbs/</p>
+                        <p>Fat</p>
                     </div>
                 </div>
-                </article>
-                <div class="ESofort">
-                    <p>sofort Lieferbar</p>
-                    <div class="EWarenkorb">
-                         <div class="buttons">
-                              <button>-</button>
-                         <input class="Epeople" type="number" name="number" id="number">
-                         <button onchange="">+</button>
-                         </div>
-                         <input class="Warenkorb" type="submit" value="IN DEN WARENKORB">
+            </article>
+            <div class="ESofort">
+                <p>sofort Lieferbar</p>
+                <div class="EWarenkorb">
+                    <div class="buttons">
+                        <button>-</button>
+                        <input class="Epeople" type="number" name="number" id="number">
+                        <button onchange="">+</button>
                     </div>
-               </div>
-          </div>
-<% }) %>
+                    <input class="Warenkorb" type="submit" value="IN DEN WARENKORB">
+                </div>
+            </div>
+        </div>
+        <% }) %>
     </section>
     <%-include('./partials/footer')%>
 
-  </body>
+</body>
+
 </html>

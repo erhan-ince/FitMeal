@@ -9,6 +9,7 @@ const profileRoutes = require('./routes/profileRoutes');
 const keys = require('./config/keys')
 const Meal = require('./models/meals');
 const Newsletter = require('./models/newsletter');
+const PORT = process.env.PORT || 3000
 
 const fetch = require('node-fetch');
 
@@ -37,7 +38,7 @@ mongoose
      .connect(keys.mongodb.dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
      .then((result) => {
           console.log('db connected');
-          app.listen(3000, () => {
+          app.listen(PORT, () => {
                console.log('listening at 3000');
           });
      })
@@ -125,7 +126,7 @@ app.get('/filter/:id1/:id2/:id3/:id4', (req, res) => {
 // random dish-----------
 
 app.get("/random", (req, res) => {
-     Meal.aggregate([{ $sample: { size: 1 } }])
+     Meal.aggregate([{ $sample: { size: 3 } }])
           .then(result => {
                res.status(200).render('random', { meals: result })
           })

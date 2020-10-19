@@ -31,10 +31,10 @@
                         <p><%= element.fat %></p>
                     </div>
                     <div class="Ecal">
-                        <p>CAL</p>
-                        <p>Protein</p>
-                        <p>CARBS</p>
-                        <p>FAT</p>
+                        <p>Cal/</p>
+                        <p>Prot/</p>
+                        <p>Carbs/</p>
+                        <p>Fat</p>
                     </div>
                 </div>
             </article>
@@ -61,23 +61,23 @@
 
 for (let i = 1; i < meals.length; i++) {
 
-        value = 0
-        amount = document.getElementById(`number${i}`)
-        amount.value = value;
+        `value${i}` = 0
+        `amount${i}` = document.getElementById(`number${i}`)
+        `amount${i}`.value = `value${i}`;
 
         function myOrderPlus() {
-            value++;
-            amount.value = value;
-            return value
+            `value{i}`++;
+            `amount${i}`.value = `value${i}`;
+            return `value${i}`
         }
 
         function myOrderMinus() {
-            value--;
-            if (value<=0) {
-                value=0
+            `value{i}`--;
+            if (`value{i}`<=0) {
+                `value{i}`=0
             }
-            amount.value = value;
-            return value
+            `amount${i}`.value = `value${i}`;
+            return `value${i}`
         }
     
 }

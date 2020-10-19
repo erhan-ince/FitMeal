@@ -48,13 +48,12 @@ ul {
      font-style: normal;
      font-weight: normal;
      font-size: 72px;
-     line-height: 72px;
-     /* or 100% */
+     line-height: 100%;
      margin: 0;
      text-align: center;
      padding: 20px 0;
      color: #ffffff;
-     width: 700px;
+     width: 80%;
 }
 .EfirstP {
      font-family: Roboto;
@@ -131,10 +130,13 @@ ul {
      padding-left: 1.1rem;
 }
 .EgreenText {
-     text-align: center;
      margin-top: 5%;
      background-color: #65c770;
      height: 50vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
 }
 .EgreenText h3 {
      font-family: Roboto;
@@ -253,8 +255,9 @@ ul {
      color: #ffffff;
      background: #65c770;
      border-radius: 0px;
-     width: 13vw;
+     width: 100%;
      height: 44px;
+     margin-top: 0.5em
 }
 .Epeople {
      background: #ffffff;
@@ -577,10 +580,10 @@ Isa Kalorienrechner---------------------- */
 }
 /* -----------------Footer Abdul------------------------------- */
 #backgroundfoter {
-     height: 60vh;
      background: #2f2f2f;
      color: rgb(248, 237, 237);
      font-family: sans-serif;
+     padding-bottom: 2em;
 }
 #navfooterimg {
      display: flex;
@@ -621,14 +624,11 @@ a:hover {
      padding-left: 20px;
 }
 .footernavsuche {
-     width: 32vw;
-     height: 5.2vh;
-     padding-top: 1.6%;
+     width: 25vw;
+     padding: 0.75em;
 }
 .footernavsubmit {
-     width: 10vw;
-     height: 7.1vh;
-     padding-top: 1%;
+     padding: 0.5em 1em;
      background: #65c770;
      color: white;
      font-size: 16px;
@@ -785,8 +785,7 @@ a:hover {
 .abduldivgredinfos33 {
      border: black 3px solid;
      border-radius: 10px;
-     width: 20vw;
-     height: 30vh;
+     padding: 2em
 }
 .abduldillon2 {
      display: flex;
@@ -853,7 +852,6 @@ a:hover {
 /*--neusection--sec4-*/
 .abdulsec4textsec {
      background: #fbf9f7;
-     height: 74vh;
 }
 .abdulsec4textsec h2 {
      padding-top: 3%;
@@ -871,10 +869,12 @@ a:hover {
      padding-left: 13%;
      font-size: 15px;
 }
+.abdulsec4textsec p:last-of-type {
+     margin-bottom: 2em;
+}
 /*--neusection--sec5-*/
 .abdulletztesecforfooter {
      background: url('/foterbackground.png');
-     height: 32vh;
 }
 .abdulletztesecforfooter {
      display: flex;
@@ -1027,9 +1027,15 @@ a:hover {
      color: #2b2a2a;
 }
 .abdulparahinwe3 {
-     padding-top: 2%;
      padding-left: 17%;
      color: #2b2a2a;
+}
+.abdulparahinwe3 li {
+     padding-top: 2%;
+     color: #2b2a2a;
+}
+.abdulparahinwe3 li:nth-of-type(odd), .abdulparahinwe4 li, .abdulparahinwe6 li {
+     list-style: square inside url("/logo_list.png")
 }
 .abdulparahinwe4 {
      padding-top: 2%;
@@ -1056,4 +1062,165 @@ a:hover {
      padding-left: 17%;
      color: #2b2a2a;
 }
+
+/* Responsive */
+
+@media only screen and (max-width: 425px) {
+
+     /* Header */
+
+     #navsec1 {
+          display: none;
+     }
+     #navnav1 ul {
+          display: block;
+          margin-top: 1em;
+          margin-bottom: 1em;
+          margin-left: 1em
+     }
+     #navnav1 img {
+          width: 100%
+     }
+     #navnav1 ul li {
+          padding-right: 0;
+          padding-left: 0;
+     }
+
+     /* Products....... */
+
+     .EGerichte {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 90%;
+     }
+     .EgerichteKategorien img {
+          height: 40vh;
+     }
+     .Epreis, .EBorderBottom {
+          justify-content: unset;
+     }
+     .Epreis h4 {
+          font-size: 14px;
+          line-height: 20px;
+          padding-left: 1em
+
+     }
+     .EBorderBottom h1 {
+          border-bottom: 1px solid #d6d6d6;
+          width: 40%;
+          margin-left: 1rem;
+     }
+     .calorie p {
+          width: 15vw;
+          padding: 0.2em;
+          margin-left: 0.5rem;
+     }
+     .calorie, .Ecal {
+          justify-content: unset;
+     }
+     .Ecal {
+          margin-left: 0.5rem;
+     }
+     .Warenkorb {
+          font-size: 10px;
+          line-height: 17px;
+          height: 30px;
+     }
+
+     /* First section */
+
+     .EfirstH1 {
+          font-size: 50px;
+          width: 100%;
+     }
+
+     /* Search */
+
+     .search article:first-of-type {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+     }
+
+     .search form {
+        display: unset;
+     }
+     .search form h3 {
+          margin-top: 1em
+     }
+     .search {
+          padding: 0;
+          padding-top: 3em;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+     }
+     .search article:first-of-type input {
+          margin-top: 1em
+     }
+     .search article:nth-of-type(2) input {
+          margin-bottom: 1em
+     }
+/* 
+     .Footer */
+
+     #abdulnavnone0{display: none;}
+     #navfooter2link{display: none;}  
+     #fotnavimg{display: none;} 
+     .fotnavppptop{display: none;}
+     #navfooterimg {
+          padding-top: 1%;
+     }
+     .abdulh1{ width:400px; font-size:16px; padding-top: 1%;}
+     .abdulpar1{ width: 440px; font-size: 10px; padding-right: 10%;}
+     #footernavsuche{width:55vw;}
+     #footernavsubmit{width:25vw; height: 9vh;}
+     #fotnavparaaa0{font-size: 12px; padding-top: 1%;}
+     .abdulpar1>span {
+          display: block
+     }
+     #backgroundfoter {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+     }
+
+     /* wie es funktioniert */
+
+     .EgridItems {
+          grid-template-columns: repeat(1, 1fr);
+     }
+     .EcheckEins {
+          display: unset;
+          padding-top: 0;
+          padding-left: 1em
+     }
+     .EdivGreenTExt {
+          padding-bottom: 1em
+     }
+     .EgreenText {
+          padding-bottom: 2em;
+          padding-top: 1em;
+     }
+
+     /* Kalorienrechner */
+
+    .rechner {
+         margin: 5%;
+         padding: 1em;
+    }
+    .gender_block, #info, .rechner_block {
+         display: unset
+    }
+    #rechner_btn {
+         width: 80%
+    }
+ 
+
+   }
 
