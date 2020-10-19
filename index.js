@@ -34,7 +34,7 @@ let fat
 
 
 mongoose
-     .connect(keys.mongodb.dbURI, { useNewUrlParser: true, useUnifiedTopology: true,useFindAndModify:false })
+     .connect(keys.mongodb.dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
      .then((result) => {
           console.log('db connected');
           app.listen(3001, () => {
@@ -42,14 +42,14 @@ mongoose
           });
      })
      .catch((err) => console.log(err));
-     app.use(
-        cookieSession({
-             name: 'session',
-             maxAge: 24 * 60 * 60 * 1000,
-             keys: [keys.session.cookieKey]
-        })
-   );
-   
+app.use(
+     cookieSession({
+          name: 'session',
+          maxAge: 24 * 60 * 60 * 1000,
+          keys: [keys.session.cookieKey]
+     })
+);
+
 app.use(express.static('public'));
 //view engine
 app.set('view engine', 'ejs');
@@ -71,7 +71,7 @@ app.get('/', (req, res) => {
 app.get('/products', (req, res) => {
      Meal.find()
           .then((result) => {
-               res.render('products', { meals: result });
+               res.render('products', { meals: result, index: 1 });
           })
           .catch((err) => console.log(err));
 });
@@ -101,11 +101,11 @@ app.get('/filter/:id1/:id2/:id3/:id4', (req, res) => {
           })
                .then(result => {
                     console.log(result)
-                    res.status(200).render('results', {meals: result})
+                    res.status(200).render('results', { meals: result })
                })
                .catch(err => console.log(err))
-          
-     } else  {
+
+     } else {
           Meal.find({
                category: req.params.id1,
                allergene: req.params.id2,
@@ -114,23 +114,23 @@ app.get('/filter/:id1/:id2/:id3/:id4', (req, res) => {
           })
                .then(result => {
                     console.log(result)
-                    res.status(200).render('results', {meals: result})
+                    res.status(200).render('results', { meals: result })
                })
                .catch(err => console.log(err))
      }
-     // Meal.find({
-     //      category: req.params.id1,
-     //      allergene: req.params.id2,
-     //      type: req.params.id3,
-     //      properties: req.params.id4
-     // })
-     //      .then(result => {
-     //           console.log(result)
-     //           res.status(200).render('results', {meals: result})
-     //      })
-     //      .catch(err => console.log(err))
 
- })
+
+})
+
+// random dish-----------
+
+app.get("/random", (req, res) => {
+     Meal.aggregate([{ $sample: { size: 1 } }])
+          .then(result => {
+               res.status(200).render('random', { meals: result })
+          })
+          .catch(err => console.log(err))
+})
 
 
 // Kalorienrechner---------------------
@@ -143,37 +143,68 @@ app.post('/rechner', (req, res) => {
      weight = req.body.weight
      activity = req.body.activity
      training = req.body.training
-     
+
      res.status(200).redirect('/kalorienrechner')
 })
 
 app.get('/kalorienbedarf', (req, res) => {
-     res.status(200).render('kalorienbedarf', {})
+     res.status(200).render('kalorienbedarf')
 })
 
 
 app.get('/kalorienrechner', (req, res) => {
      if (gender == "weiblich") {
           rate = ((Number(weight) * 10) + (Number(size) * 6.25) - (Number(age) * 5) - 161).toFixed()
-     } else {
+     } else if (gender == "männlich") {
           rate = ((Number(weight) * 10) + (Number(size) * 6.25) - (Number(age) * 5) + 5).toFixed()
      }
+     else {rate = 0}
      need = (Number(rate) * Number(activity)).toFixed()
-     if (training=="abnehmen") {
-          need = need - 300
-     } else if (training=="muskelaufbau") {
-          need = need + 300
+     if (training == "abnehmen") {
+          need = Number(need) - 300
+          if (activity==1.90) {
+               carbs = (need * 0.65 / 4).toFixed()
+               protein = (need * 0.15 / 4).toFixed()
+               fat = (need * 0.20 / 9).toFixed()
+          } else {
+               carbs = (need * 0.50 / 4).toFixed()
+               protein = (need * 0.20 / 4).toFixed()
+               fat = (need * 0.30 / 9).toFixed()
+          }
+     } else if (training == "muskelaufbau") {
+          need = Number(need) + 300
+          if (activity == 1.90) {
+               carbs = (Number(need) * 0.65 / 4).toFixed()
+               protein = (1.5 * Number(weight) + (Number(need-300)*0.15/4)).toFixed()
+               fat = (Number(need) * 0.20 / 9).toFixed()
+          }
+          else {
+               carbs = (Number(need) * 0.50 / 4).toFixed()
+               protein = (1.5 * Number(weight) + (Number(need-300)*0.20/4)).toFixed()
+               fat = (Number(need) * 0.30 / 9).toFixed()
+          }
      }
      else {
           need = need
+          if (activity==1.90) {
+               carbs = (Number(need) * 0.65 / 4).toFixed()
+               protein = (Number(need) * 0.15 / 4).toFixed()
+               fat = (Number(need) * 0.20 / 9).toFixed()
+          } else {
+               carbs = (Number(need) * 0.50 / 4).toFixed()
+               protein = (Number(need) * 0.20 / 4).toFixed()
+               fat = (Number(need) * 0.30 / 9).toFixed()
+          }
+
      }
-     carbs = (need * 0.5 / 4).toFixed()
-     protein = (need * 0.25 / 4).toFixed()
-     fat = (need * 0.25 / 9).toFixed()
-     
+
      console.log(rate, need, carbs, protein, fat)
-     res.status(200).render('kalorienrechner', {rate, need, carbs, protein, fat, gender, age, size, weight, activity, training})
+     res.status(200).render('kalorienrechner', { rate, need, carbs, protein, fat, gender, age, size, weight, activity, training })
 })
+
+// carbs = (need * 0.5 / 4).toFixed()
+// protein = (need * 0.20 / 4).toFixed()
+// fat = (need * 0.30 / 9).toFixed()
 
 //Form-----------------------------
 app.get('/form', (req, res) => {

@@ -23,8 +23,10 @@
             Variablen, die beachtet werden müssen und weswegen stichfeste Richtwerte nur schwer anzusetzen sind.</p>
         <p id="abduparaaa4">Ein gesunder Mittelwert für gesunde Erwachsene, zwischen 25 und 50 Jahren, wird von der
             Deutschen Gesellschaft für Ernährung e.V. (DGE) wie folgt ausgegeben:</p>
-        <p class="abduparaaa5und6">Männer: Ca. 2300 kcal pro Tag.</p>
-        <p class="abduparaaa5und6">Frauen: Ca. 1800 kcal pro Tag.</p>
+        <ul class="abduparaaa5und6">
+            <li>Männer: Ca. 2300 kcal pro Tag.</li>
+            <li>Frauen: Ca. 1800 kcal pro Tag.</li>
+        </ul>
         <h2 class="abduHaa123">Finde den richtigen Mix bei der Kalorienzufuhr</h2>
         <p id="abduparaaa7">Kohlenhydrate sind die quantitativ wichtigste Energiequelle für den Menschen, weswegen die
             DGE gesunden Erwachsenen empfiehlt, mindestens 50 Prozent ihrer täglichen Energiezufuhr in Form von
@@ -38,7 +40,7 @@
         <h2 class="abduHaa123">Kalorienbedarf selbst berechnen mit dem FITTASTE Kalorienrechner</h2>
     </section>
 
-    <section class="rechner">
+    <section id="rechner" class="rechner">
         <h1> FITTASTE KALORIENRECHNER</h1>
 
         <form action="/rechner" method="POST">
@@ -46,17 +48,18 @@
                 <img class="rechner_icon_big" src="/gender.png" alt="">
                 <h3>GESCHLECHT</h3>
             </div>
-            <div class="gender">
-                <input type="radio" id="" name="gender" value="weiblich">
-                <label for="">Weiblich</label>
-                <img class="rechner_icon_small" src="/female.png" alt="">
+            <div class="gender_block">
+                <div class="gender">
+                    <input type="radio" id="" name="gender" value="weiblich">
+                    <label for="">Weiblich</label>
+                    <img class="rechner_icon_small" src="/female.png" alt="">
+                </div>
+                <div class="gender">
+                    <input type="radio" id="" name="gender" value="männlich">
+                    <label for="">Männlich</label>
+                    <img class="rechner_icon_small" src="/male.png" alt="">
+                </div>
             </div>
-            <div class="gender">
-                <input type="radio" id="" name="gender" value="männlich">
-                <label for="">Männlich</label>
-                <img class="rechner_icon_small" src="/male.png" alt="">
-            </div>
-
             <div class="rechner_container">
                 <img class="rechner_icon_big" src="/person.png" alt="">
                 <h3>PERSÖNLICHE INFORMATIONEN</h3>
@@ -75,38 +78,42 @@
                     <input type="text" name="weight" id="">
                 </div>
             </div>
+            <div class="rechner_block">
+                <div>
+                    <div class="rechner_container">
+                        <img class="bicycle" src="/bicycle.png" alt="">
+                        <h3>KÖRPERLICHE AKTIVITÄT</h3>
+                    </div>
+                    <input type="radio" id="" name="activity" value="1.20">
+                    <label for=""> kaum aktiv</label>
+                    <a href="#abdulactivity1"><img class="rechner_icon_big" src="/information.png" alt=""></a><br>
+                    <input type="radio" id="" name="activity" value="1.37">
+                    <label for=""> leicht aktiv</label>
+                    <a href="#abdulactivity1"><img class="rechner_icon_big" src="/information.png" alt=""></a><br>
+                    <input type="radio" id="" name="activity" value="1.55">
+                    <label for=""> aktiv</label><a href="#abdulactivity1"><img class="rechner_icon_big"
+                            src="/information.png" alt=""></a><br>
+                    <input type="radio" id="" name="activity" value="1.72">
+                    <label for=""> sehr aktiv</label>
+                    <a href="#abdulactivity1"><img class="rechner_icon_big" src="/information.png" alt=""></a><br>
+                    <input type="radio" id="" name="activity" value="1.90">
+                    <label for=""> profi Sportler</label>
+                    <a href="#abdulactivity1"><img class="rechner_icon_big" src="/information.png" alt=""></a><br>
+                </div>
+                <div class="ziel">
+                    <div class="rechner_container">
+                        <img class="rechner_icon_big" src="/dumbbell.png" alt="">
+                        <h3>TRAININGSZIEL</h3>
+                    </div>
+                    <input type="radio" id="" name="training" value="abnehmen">
+                    <label for=""> Abnehmen</label><br>
+                    <input type="radio" id="" name="training" value="gewicht_halten">
+                    <label for=""> Gewicht halten</label><br>
+                    <input type="radio" id="" name="training" value="muskelaufbau">
+                    <label for=""> Muskelaufbau</label><br>
+                </div>
 
-            <div class="rechner_container">
-                <img class="bicycle" src="/bicycle.png" alt="">
-                <h3>KÖRPERLICHE AKTIVITÄT</h3>
             </div>
-            <input type="radio" id="" name="activity" value="1.20">
-            <label for=""> kaum aktiv</label>
-            <a href=""><img class="rechner_icon_big" src="/information.png" alt=""></a><br>
-            <input type="radio" id="" name="activity" value="1.37">
-            <label for=""> leicht aktiv</label>
-            <a href=""><img class="rechner_icon_big" src="/information.png" alt=""></a><br>
-            <input type="radio" id="" name="activity" value="1.55">
-            <label for=""> aktiv</label><a href=""><img class="rechner_icon_big" src="/information.png" alt=""></a><br>
-            <input type="radio" id="" name="activity" value="1.72">
-            <label for=""> sehr aktiv</label>
-            <a href=""><img class="rechner_icon_big" src="/information.png" alt=""></a><br>
-            <input type="radio" id="" name="activity" value="1.90">
-            <label for=""> profi Sportler</label>
-            <a href=""><img class="rechner_icon_big" src="/information.png" alt=""></a><br>
-
-            <div class="rechner_container">
-                <img class="rechner_icon_big" src="/dumbbell.png" alt="">
-                <h3>TRAININGSZIEL</h3>
-            </div>
-            <input type="radio" id="" name="training" value="abnehmen">
-            <label for=""> Abnehmen</label><br>
-            <input type="radio" id="" name="training" value="gewicht_halten">
-            <label for=""> Gewicht halten</label><br>
-            <input type="radio" id="" name="training" value="muskelaufbau">
-            <label for=""> Muskelaufbau</label><br>
-
-
 
             <input id="rechner_btn" type="submit" value="Jetzt Kalorienbedarf berechnen">
         </form>
@@ -127,7 +134,8 @@
         <p class="abdulparahinwe4">Grundumsatz (siehe oben) x Deine Aktivität (siehe Tabelle unten) = Dein täglicher
             Kalorienbedarf</p>
         <p class="abdulparahinwe4">Aktivitätstabelle zur Berechnung deines Kalorienbedarfs</p>
-        <p class="abdulparahinwe4">1,20 = kaum aktiv (Trainiert selten bis garnicht, ist im Beruf ausschließlich sitzend
+        <p id="abdulactivity1" class="abdulparahinwe4">1,20 = kaum aktiv (Trainiert selten bis garnicht, ist im Beruf
+            ausschließlich sitzend
             tätig)</p>
         <p class="abdulparahinwe4">1,37 = leicht aktiv (wenig Training (1 bis 2 Tage pro Woche), im Job meist sitzend
             tätig)</p>
@@ -137,6 +145,7 @@
             Arbeit)</p>
         <p class="abdulparahinwe4">1,90 = profi Aktivist (zwei mal täglich Sport oder ein besonders körperlich
             anstrengender Job)</p>
+        <a class="isa_back2" href="#rechner">Zurück zum Kalorienrechner</a>
         <h2 class="abdultexth2hin">3. Dein Ziel: Abnehmen, Gewicht halten oder Muskeln aufbauen?</h2>
         <p class="abdulparahinwe5">Abnehmen: Dein ausgerechneter Kalorienbedarf - 300 kcal pro Tag Gewicht halten: Dein
             ausgerechneter Kalorienbedarf</p>
@@ -158,6 +167,7 @@
         <p class="abdulparahinwe6">Muskelaufbau: 2903 kcal + 300 kcal</p>
         <p class="abdulparahinwe6">= 3203 kcal</p>
         <p class="abdulparahinwe6">Der Kalorienverbrauch für Marc liegt bei 3203 kcal pro Tag.</p>
+        <p class="abdulparahinwe8">Also, Taschenrechner raus und losrechnen!</p>
         <h2 class="abdultexth2hin">5. Umsetzung</h2>
         <p class="abdulparahinwe7">Wenn du jetzt deinen Kalorienbedarf ermittelt hast, geht es zum nächsten Schritt der
             Ernährung.</p>
@@ -166,13 +176,6 @@
             (z.B. Joghurt, Mandeln, Fitness-Riegel) einbaust.</p>
         <p class="abdulparahinwe7">Oftmals ist es schwer, die Kalorien eines Essens zu beziffern. Eine Hilfestellung
             bietet da fittaste - denn hier sind <br> die Kalorienangaben auf jeder Mahlzeit direkt enthalten.</p>
-        <p class="abdulparahinwe8">1,55 = moderate Aktivität (moderate Bewegung, Sport drei bis fünf Tage <br>die Woche)
-        </p>
-        <p class="abdulparahinwe8">1,725 = hohe Aktivität (intensive Bewegung, Sport sechs bis sieben Tage <br>pro
-            Woche)</p>
-        <p class="abdulparahinwe8"> class="abdulparahinwe8"1,9 = sehr hohe Aktivität (sehr Intensive Bewegung, Sport und
-            Beruf mit <br>körperlicher Tätigkeit)</p>
-        <p class="abdulparahinwe8">Also, Taschenrechner raus und losrechnen.</p>
     </section>
     <%-include('./partials/footer')%>
 </body>

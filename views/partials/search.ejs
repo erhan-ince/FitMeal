@@ -10,75 +10,75 @@
 
 <body>
     <section class="search">
-        <img src="/filter.png" alt="">
-        <h1>FILTER</h1>
-                <form action="/filter" method="POST">
-                    <!-- <div>
-                        <h3>ZIEL</h3>
-                    </div>
-        
-                    <input type="radio" id="ziel1" name="ziel" value="abnehmen">
-                    <label for="ziel1"> ABNEHMEN</label><br>
-                    <input type="radio" id="ziel2" name="ziel" value="muskel">
-                    <label for="ziel2"> MUSKELAUFBAU</label><br>
-                    <input type="radio" id="ziel3" name="ziel" value="gesund">
-                    <label for="ziel3"> GESUND LEBEN</label><br> -->
-    
-                    <div>
-                        <h3>KATEGORIE</h3>
-                    </div>
-                    <input type="radio" id="" name="category" value="Huhn">
-                    <label for=""> HUHN</label><br>
-                    <input type="radio" id="" name="category" value="Rind">
-                    <label for=""> RIND</label><br>
-                    <input type="radio" id="" name="category" value="Vegan">
-                    <label for=""> VEGAN</label><br>
-                    <input type="radio" id="" name="category" value="Fisch">
-                    <label for=""> FISCH</label><br>
-                    <input type="radio" id="" name="category" value="Appetizer">
-                    <label for=""> APPETIZER</label><br>
+        <article>
+            <div id="search_top">
+                <img src="/filter.png" alt="">
+                <h1>FILTER</h1>
+            </div>
+            <form action="/filter" method="POST">
 
-                    <div>
-                        <h3>ALLERGENE</h3>
-                    </div>
+                <div>
+                    <h3>KATEGORIE</h3>
 
-                    <input type="radio" id="allergene1" name="allergene" value="glutenfrei">
-                    <label for="allergene1"> GLUTENFREI</label><br>
-                    <input type="radio" id="allergene2" name="allergene" value="laktosefrei">
-                    <label for="allergene2"> LAKTOSEFREI</label><br>
-                    <input type="radio" id="allergene3" name="allergene" value="ohne Nüsse">
-                    <label for="allergene3"> OHNE NÜSSE</label><br>
-                    <input type="radio" id="allergene4" name="allergene" value="keine Allergene">
-                    <label for="allergene3"> KEINE ALLERGENE</label><br>
+                    <select name="category" id="">
+                        <option value="Huhn"> HUHN</option>
+                        <option value="Rind"> RIND</option>
+                        <option value="Vegan"> VEGAN</option>
+                        <option value="Fisch"> FISCH</option>
+                        <option value="Appetizer"> APPETIZER</option>
+                    </select>
+                </div>
 
-                    <div>
-                        <h3>TYP</h3>
-                    </div>
 
-                    <input type="radio" id="typ1" name="type" value="Gericht">
-                    <label for="typ1"> GERICHT</label><br>
-                    <input type="radio" id="typ2" name="type" value="Snack">
-                    <label for="typ2"> SNACK</label><br>
+                <div>
+                    <h3>ALLERGENE</h3>
 
-                    <div>
-                        <h3>EIGENSCHAFT</h3>
-                    </div>
+                    <select name="allergene" id="">
+                        <option value="keine Allergene"> KEINE ALLERGENE</option>
+                        <option value="glutenfrei"> GLUTENFREI</option>
+                        <option value="laktosefrei"> LAKTOSEFREI</option>
+                        <option value="ohne Nüsse"> OHNE NÜSSE</option>
+                    </select>
 
-                    <input type="radio" id="eigenschaft1" name="properties" value="low carb">
-                    <label for="eigenschaft1"> LOW CARB</label><br>
-                    <input type="radio" id="eigenschaft2" name="properties" value="high protein">
-                    <label for="eigenschaft2"> HIGH PROTEIN</label><br>
-                    <input type="radio" id="eigenschaft3" name="properties" value="high carb">
-                    <label for="eigenschaft3"> HIGH CARB</label><br>
-                    <input type="radio" id="eigenschaft4" name="properties" value="low calories">
-                    <label for="eigenschaft4"> LOW CALORIES</label><br>
-                    <input type="radio" id="eigenschaft4" name="properties" value="low fat">
-                    <label for="eigenschaft4"> LOW FAT</label><br>
-    
-                    <input type="submit" value="Submit">
-                </form>
+                </div>
 
+                <div>
+                    <h3>TYP</h3>
+
+                    <select name="type" id="">
+                        <option value="Gericht"> GERICHT</option>
+                        <option value="Snack"> SNACK</option>
+                    </select>
+
+                </div>
+
+
+                <div>
+                    <h3>EIGENSCHAFT</h3>
+
+
+                    <select name="properties" id="">
+                        <option value="low carb"> LOW CARB</option>
+                        <option value="high protein"> HIGH PROTEIN</option>
+                        <option value="high carb"> HIGH CARB</option>
+                        <option value="low calories"> LOW CALORIES</option>
+                        <option value="low fat"> LOW FAT</option>
+                    </select>
+
+                </div>
+
+                <input id="search_btn" type="submit" value="Submit">
+            </form>
+        </article>
+        <article>
+            <h3>Noch unsicher?</h3>
+            <h3>Lass dich überaschen!</h3>
+            <form action="/random">
+                <input id="search_btn2" type="submit" value="zufällige Speise">
+            </form>
+        </article>
     </section>
+
 
 </body>
 
