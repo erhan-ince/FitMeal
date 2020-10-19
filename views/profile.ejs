@@ -11,14 +11,8 @@
      </head>
 
      <body>
-          <nav>
-               <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/auth/login">Login</a></li>
-                    <li><a href="/auth/logout">Logout</a></li>
-                    <li><a href="/profile/">Profil</a></li>
-               </ul>
-          </nav>
+          <%-include('./partials/header')%>
+
           <section>
                <h1>welcome To our Website <%= user.firstName %></h1>
                <img src="<%=user.picture  %>" alt="" />
