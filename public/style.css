@@ -491,8 +491,6 @@ Isa Kalorienrechner---------------------- */
 }
 #rechner_btn {
      width: 100%;
-     height: 7.1vh;
-     padding: 1%;
      background: #65c770;
      border: none;
      color: white;
@@ -803,6 +801,7 @@ a:hover {
 }
 .textscheibe {
      padding-right: 30%;
+     padding-left: 5%;
      padding-top: 6%;
 }
 .abduldillon2 img {
@@ -1150,6 +1149,9 @@ a:hover {
      .search form h3 {
           margin-top: 1em
      }
+     .search form div, #search_btn {
+          transform: translateX(-1em);
+     }
      .search {
           padding: 0;
           padding-top: 3em;
@@ -1218,8 +1220,68 @@ a:hover {
          display: unset
     }
     #rechner_btn {
+         width: 90%;
+    }
+    .abduHaa123, .rechner h1, .abdultexth2hin, .abdulparahinwe1, #abduparaaa1, #abduparaaa2, #abduparaaa3, #abduparaaa4, .abduparaaa5und6, #abduparaaa7, #abduparaaa8, .abdulparahinwe2, .abdulparahinwe3, .abdulparahinwe4, .abdulparahinwe5, .abdulparahinwe6, .abdulparahinwe7, .abdulparahinwe8 {
+         width: 65%;
+         padding-left: 8%
+    }
+    .isa_back2 {
+         margin-left: 8%;
+         margin-bottom: 1em;
+    }
+    .result {
+         display: unset;
+    }
+
+    /* Deine Zeit */
+
+    .abdulsect3dive{display: none;}
+    .abdulsecinfosflex{display: block;}
+    .abduldivgredinfos22{display: none;}
+    .abdulullibtwen{display: none;}
+
+    .abankabdulank {
+         display: inline-block;
+         padding-bottom: 1em;
+    }
+    .abdulsec4textsec h2 {
+         margin-left: 2rem;
          width: 80%
     }
+    .abdulsec4textsec p {
+     padding-left: 2rem;
+     text-align: left;
+     }
+     .abdulsecinfosflex {
+          padding-left: 2rem
+     }
+     .abduldivgredinfos33 {
+          padding: 1em
+     }
+     .abduldivgredinfos33 {
+          width: 80%
+     }
+     .abduldivgredinfos11 p {
+          width: 90%
+     }
+
+     /* Men's health */
+
+     .abduldivfoterflexmitbilder2 {
+          width: 40%;
+          font-size: 1em;
+          line-height: 110%;
+          word-spacing: 2px;
+     }
+     #abdulphotoRectangle33 {
+          width: 60%
+     }
+
+
+
+
+
  
 
    }
