@@ -81,10 +81,8 @@ app.get('/products', (req, res) => {
 // Paypal
 paypal.configure({
    mode: 'sandbox', //sandbox or live
-   client_id:
-      'AY551Nh_ckkgYHS9cOT9DXo-YOa1G5bOJ_6uo2YhCSi0ZBNu5UKQckkaULStOjuIFtPKSmgXDqDIJUj0',
-   client_secret:
-      'EBiZPxbYqpe4PWnwyuzjOvFrolWkgaFfPdl54wJ7kQyQuAHBuzW_0Re1syBucKY1-zvYQmi_9HZQEwx4',
+   client_id: keys.paypal.client_id,
+   client_secret: keys.paypal.client_secret,
 });
 
 // Pay------------------------------------------------------
