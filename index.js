@@ -71,7 +71,7 @@ app.get('/', (req, res) => {
 app.get('/products', (req, res) => {
    Meal.find()
       .then((result) => {
-         res.render('products', { meals: result, index: 1, loggedin });
+         res.render('products', { meals: result, index: 1 });
       })
       .catch((err) => console.log(err));
 });
