@@ -93,6 +93,7 @@ ul {
 .EgridItems {
      display: grid;
      grid-template-columns: repeat(3, 1fr);
+     margin-bottom: 5%;
 }
 .EflexDiv {
      display: flex;
@@ -129,7 +130,6 @@ ul {
      padding-left: 1.1rem;
 }
 .EgreenText {
-     margin-top: 5%;
      background-color: #65c770;
      height: 50vh;
      display: flex;

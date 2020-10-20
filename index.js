@@ -164,7 +164,7 @@ app.get('/success', (req, res) => {
          throw error;
       } else {
          console.log(JSON.stringify(payment));
-         res.send('Success');
+         res.send('succes');
       }
    });
 });
@@ -244,7 +244,7 @@ app.get('/succes', (req, res) => {
          throw error;
       } else {
          console.log(JSON.stringify(payment));
-         res.send('Success');
+         res.send('success');
       }
    });
 });
@@ -447,3 +447,6 @@ app.post('/newsletter', (req, res) => {
       })
       .catch((err) => console.log(err));
 });
+// app.get('/success',  (req, res) => {
+//    res.render('success', { user: req.user });
+// });
