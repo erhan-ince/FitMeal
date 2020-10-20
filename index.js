@@ -244,7 +244,7 @@ app.get('/succes', (req, res) => {
          throw error;
       } else {
          console.log(JSON.stringify(payment));
-         res.send('success');
+         res.render('index');
       }
    });
 });
