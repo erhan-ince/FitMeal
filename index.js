@@ -87,6 +87,12 @@ app.post('/pay/:id', (req, res) => {
    console.log(req.params.id);
    Meal.findById(req.params.id).then((result) => {
       console.log(result);
+      if (typeof localStorage === "undefined" || localStorage === null) {
+         var LocalStorage = require('node-localstorage').LocalStorage;
+         localStorage = new LocalStorage('./scratch');
+       }
+        
+       
       const create_payment_json = {
          intent: 'sale',
          payer: {
@@ -117,6 +123,8 @@ app.post('/pay/:id', (req, res) => {
             },
          ],
       };
+      localStorage.setItem('myAmount', result.price);
+       console.log(localStorage.getItem('myAmount'));
       paypal.payment.create(create_payment_json, function (error, payment) {
          if (error) {
             throw error;
@@ -131,6 +139,7 @@ app.post('/pay/:id', (req, res) => {
    });
 });
 app.get('/success', (req, res) => {
+   console.log(req)
    const payerId = req.query.PayerID;
    const paymentId = req.query.paymentId;
 
@@ -140,7 +149,8 @@ app.get('/success', (req, res) => {
          {
             amount: {
                currency: 'EUR',
-               total: result.price,
+               total: localStorage.getItem('myAmount'),
+
             },
          },
       ],
@@ -154,7 +164,7 @@ app.get('/success', (req, res) => {
          throw error;
       } else {
          console.log(JSON.stringify(payment));
-         res.send('Succes');
+         res.send('succes');
       }
    });
 });
@@ -210,7 +220,7 @@ app.post('/pay1/:id', (req, res) => {
       });
    });
 
-app.get('/success', (req, res) => {
+app.get('/succes', (req, res) => {
    const payerId = req.query.PayerID;
    const paymentId = req.query.paymentId;
 
@@ -234,7 +244,7 @@ app.get('/success', (req, res) => {
          throw error;
       } else {
          console.log(JSON.stringify(payment));
-         res.send('Succes');
+         res.send('success');
       }
    });
 });
@@ -437,3 +447,6 @@ app.post('/newsletter', (req, res) => {
       })
       .catch((err) => console.log(err));
 });
+// app.get('/success',  (req, res) => {
+//    res.render('success', { user: req.user });
+// });
