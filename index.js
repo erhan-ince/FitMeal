@@ -93,7 +93,7 @@ app.post('/pay/:id', (req, res) => {
             payment_method: 'paypal',
          },
          redirect_urls: {
-            return_url: `https://serene-hamlet-52311.herokuapp.com:${PORT}/success`,
+            return_url: `https://serene-hamlet-52311.herokuapp.com/success`,
             cancel_url: 'https://serene-hamlet-52311.herokuapp.com/cancel',
          },
          transactions: [
