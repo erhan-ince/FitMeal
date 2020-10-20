@@ -41,7 +41,6 @@ ul {
      width: 101%;
      margin-bottom: -0.1%;
      /* height: 125vh; */
-    
 }
 .EfirstH1 {
      font-family: Roboto;
@@ -257,7 +256,7 @@ ul {
      border-radius: 0px;
      width: 100%;
      height: 44px;
-     margin-top: 0.5em
+     margin-top: 0.5em;
 }
 .Epeople {
      background: #ffffff;
@@ -299,6 +298,23 @@ button {
      /* height: 100vh; */
 }
 /* -----------------------------Login-------------------------------- */
+.ELogin {
+     height: 40vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     background: #65c770;
+}
+.Eprofile {
+     height: 70vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     background: #65c770;
+     color: white;
+}
 .login-with-google-btn {
      text-decoration: none;
      transition: background-color 0.3s, box-shadow 0.3s;
@@ -354,7 +370,7 @@ button {
      align-items: flex-end;
 }
 .search h1 {
-     padding-left: 2em
+     padding-left: 2em;
 }
 .search select {
      margin-left: 2em;
@@ -368,18 +384,17 @@ button {
      color: white;
      font-size: 16px;
      margin-left: 2em;
-     padding: 0.5em 2em
+     padding: 0.5em 2em;
 }
 .search form {
      display: flex;
      text-align: center;
-
 }
 #search_top {
      display: flex;
 }
 .search h3 {
-     padding-bottom: 1em
+     padding-bottom: 1em;
 }
 .search article:nth-of-type(2) {
      text-align: center;
@@ -392,10 +407,8 @@ button {
      border: none;
      color: white;
      font-size: 16px;
-     padding: 0.5em 2em
+     padding: 0.5em 2em;
 }
-
-
 
 /* Isa Kalorienrechner */
 
@@ -447,7 +460,7 @@ button {
 }
 .gender {
      display: flex;
-     padding-right: 4em
+     padding-right: 4em;
 }
 .gender label {
      padding-left: 0.2em;
@@ -472,7 +485,6 @@ button {
 }
 /* 
 Isa Kalorienrechner---------------------- */
-
 
 .rechner_icon_small {
      width: 40px;
@@ -545,7 +557,7 @@ Isa Kalorienrechner---------------------- */
      display: inline-block;
      text-align: center;
      width: 40%;
-     margin-left: 17%
+     margin-left: 17%;
 }
 /* -----------------Header Abdul------------------------------- */
 #navsec1 {
@@ -694,8 +706,6 @@ a:hover {
      font-size: 2em;
 }
 
-
-
 /*----bordernsection-----*/
 .abdulbordersgrid1 {
      border: #ffffff 1px solid;
@@ -783,7 +793,7 @@ a:hover {
 .abduldivgredinfos33 {
      border: black 3px solid;
      border-radius: 10px;
-     padding: 2em
+     padding: 2em;
 }
 .abduldillon2 {
      display: flex;
@@ -993,7 +1003,7 @@ a:hover {
      font-size: 14px;
 }
 .abduparaaa5und6 li {
-     list-style: square inside url("/logo_list.png")
+     list-style: square inside url('/logo_list.png');
 }
 #abduparaaa7 {
      padding-top: 2%;
@@ -1033,8 +1043,10 @@ a:hover {
      padding-top: 2%;
      color: #2b2a2a;
 }
-.abdulparahinwe3 li:nth-of-type(odd), .abdulparahinwe4 li, .abdulparahinwe6 li {
-     list-style: square inside url("/logo_list.png")
+.abdulparahinwe3 li:nth-of-type(odd),
+.abdulparahinwe4 li,
+.abdulparahinwe6 li {
+     list-style: square inside url('/logo_list.png');
 }
 .abdulparahinwe4 {
      padding-top: 2%;
@@ -1065,7 +1077,6 @@ a:hover {
 /* Responsive */
 
 @media only screen and (max-width: 425px) {
-
      /* Header */
 
      #navsec1 {
@@ -1075,10 +1086,10 @@ a:hover {
           display: block;
           margin-top: 1em;
           margin-bottom: 1em;
-          margin-left: 1em
+          margin-left: 1em;
      }
      #navnav1 img {
-          width: 100%
+          width: 100%;
      }
      #navnav1 ul li {
           padding-right: 0;
@@ -1096,14 +1107,14 @@ a:hover {
      .EgerichteKategorien img {
           height: 40vh;
      }
-     .Epreis, .EBorderBottom {
+     .Epreis,
+     .EBorderBottom {
           justify-content: unset;
      }
      .Epreis h4 {
           font-size: 14px;
           line-height: 20px;
-          padding-left: 1em
-
+          padding-left: 1em;
      }
      .EBorderBottom h1 {
           border-bottom: 1px solid #d6d6d6;
@@ -1115,7 +1126,8 @@ a:hover {
           padding: 0.2em;
           margin-left: 0.5rem;
      }
-     .calorie, .Ecal {
+     .calorie,
+     .Ecal {
           justify-content: unset;
      }
      .Ecal {
@@ -1144,12 +1156,13 @@ a:hover {
      }
 
      .search form {
-        display: unset;
+          display: unset;
      }
      .search form h3 {
-          margin-top: 1em
+          margin-top: 1em;
      }
-     .search form div, #search_btn {
+     .search form div,
+     #search_btn {
           transform: translateX(-1em);
      }
      .search {
@@ -1161,28 +1174,52 @@ a:hover {
           align-items: center;
      }
      .search article:first-of-type input {
-          margin-top: 1em
+          margin-top: 1em;
      }
      .search article:nth-of-type(2) input {
-          margin-bottom: 1em
+          margin-bottom: 1em;
      }
-/* 
+     /* 
      .Footer */
 
-     #abdulnavnone0{display: none;}
-     #navfooter2link{display: none;}  
-     #fotnavimg{display: none;} 
-     .fotnavppptop{display: none;}
+     #abdulnavnone0 {
+          display: none;
+     }
+     #navfooter2link {
+          display: none;
+     }
+     #fotnavimg {
+          display: none;
+     }
+     .fotnavppptop {
+          display: none;
+     }
      #navfooterimg {
           padding-top: 1%;
      }
-     .abdulh1{ width:400px; font-size:16px; padding-top: 1%;}
-     .abdulpar1{ width: 440px; font-size: 10px; padding-right: 10%;}
-     #footernavsuche{width:55vw;}
-     #footernavsubmit{width:25vw; height: 9vh;}
-     #fotnavparaaa0{font-size: 12px; padding-top: 1%;}
-     .abdulpar1>span {
-          display: block
+     .abdulh1 {
+          width: 400px;
+          font-size: 16px;
+          padding-top: 1%;
+     }
+     .abdulpar1 {
+          width: 440px;
+          font-size: 10px;
+          padding-right: 10%;
+     }
+     #footernavsuche {
+          width: 55vw;
+     }
+     #footernavsubmit {
+          width: 25vw;
+          height: 9vh;
+     }
+     #fotnavparaaa0 {
+          font-size: 12px;
+          padding-top: 1%;
+     }
+     .abdulpar1 > span {
+          display: block;
      }
      #backgroundfoter {
           display: flex;
@@ -1200,10 +1237,10 @@ a:hover {
      .EcheckEins {
           display: unset;
           padding-top: 0;
-          padding-left: 1em
+          padding-left: 1em;
      }
      .EdivGreenTExt {
-          padding-bottom: 1em
+          padding-bottom: 1em;
      }
      .EgreenText {
           padding-bottom: 2em;
@@ -1212,58 +1249,85 @@ a:hover {
 
      /* Kalorienrechner */
 
-    .rechner {
-         margin: 5%;
-         padding: 1em;
-    }
-    .gender_block, #info, .rechner_block {
-         display: unset
-    }
-    #rechner_btn {
-         width: 90%;
-    }
-    .abduHaa123, .rechner h1, .abdultexth2hin, .abdulparahinwe1, #abduparaaa1, #abduparaaa2, #abduparaaa3, #abduparaaa4, .abduparaaa5und6, #abduparaaa7, #abduparaaa8, .abdulparahinwe2, .abdulparahinwe3, .abdulparahinwe4, .abdulparahinwe5, .abdulparahinwe6, .abdulparahinwe7, .abdulparahinwe8 {
-         width: 65%;
-         padding-left: 8%
-    }
-    .isa_back2 {
-         margin-left: 8%;
-         margin-bottom: 1em;
-    }
-    .result {
-         display: unset;
-    }
+     .rechner {
+          margin: 5%;
+          padding: 1em;
+     }
+     .gender_block,
+     #info,
+     .rechner_block {
+          display: unset;
+     }
+     #rechner_btn {
+          width: 90%;
+     }
+     .abduHaa123,
+     .rechner h1,
+     .abdultexth2hin,
+     .abdulparahinwe1,
+     #abduparaaa1,
+     #abduparaaa2,
+     #abduparaaa3,
+     #abduparaaa4,
+     .abduparaaa5und6,
+     #abduparaaa7,
+     #abduparaaa8,
+     .abdulparahinwe2,
+     .abdulparahinwe3,
+     .abdulparahinwe4,
+     .abdulparahinwe5,
+     .abdulparahinwe6,
+     .abdulparahinwe7,
+     .abdulparahinwe8 {
+          width: 65%;
+          padding-left: 8%;
+     }
+     .isa_back2 {
+          margin-left: 8%;
+          margin-bottom: 1em;
+     }
+     .result {
+          display: unset;
+     }
 
-    /* Deine Zeit */
+     /* Deine Zeit */
 
-    .abdulsect3dive{display: none;}
-    .abdulsecinfosflex{display: block;}
-    .abduldivgredinfos22{display: none;}
-    .abdulullibtwen{display: none;}
-
-    .abankabdulank {
-         display: inline-block;
-         padding-bottom: 1em;
-    }
-    .abdulsec4textsec h2 {
-         margin-left: 2rem;
-         width: 80%
-    }
-    .abdulsec4textsec p {
-     padding-left: 2rem;
-     text-align: left;
+     .abdulsect3dive {
+          display: none;
      }
      .abdulsecinfosflex {
-          padding-left: 2rem
+          display: block;
+     }
+     .abduldivgredinfos22 {
+          display: none;
+     }
+     .abdulullibtwen {
+          display: none;
+     }
+
+     .abankabdulank {
+          display: inline-block;
+          padding-bottom: 1em;
+     }
+     .abdulsec4textsec h2 {
+          margin-left: 2rem;
+          width: 80%;
+     }
+     .abdulsec4textsec p {
+          padding-left: 2rem;
+          text-align: left;
+     }
+     .abdulsecinfosflex {
+          padding-left: 2rem;
      }
      .abduldivgredinfos33 {
-          padding: 1em
+          padding: 1em;
      }
      .abduldivgredinfos33 {
-          width: 80%
+          width: 80%;
      }
      .abduldivgredinfos11 p {
-          width: 90%
+          width: 90%;
      }
 
      /* Men's health */
@@ -1275,14 +1339,6 @@ a:hover {
           word-spacing: 2px;
      }
      #abdulphotoRectangle33 {
-          width: 60%
+          width: 60%;
      }
-
-
-
-
-
- 
-
-   }
-
+}
