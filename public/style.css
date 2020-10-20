@@ -10,22 +10,6 @@
 body {
      font-family: 'Roboto', sans-serif;
 }
-/* nav {
-     background: gold;
-     color: #ffffff;
-     padding: 30px 20px 10px;
-     height: calc(10vh - 20px);
-}
-nav a {
-     text-decoration: none;
-     color: #ffffff;
-     font-size: 1.4em;
-}
-ul {
-     display: flex;
-     margin: 0;
-     list-style: none;
-} */
 
 #EfirstSection {
      /* height: 100vh; */
@@ -298,6 +282,12 @@ button {
      /* height: 100vh; */
 }
 /* -----------------------------Login-------------------------------- */
+.show {
+     display: block
+}
+.hide {
+     display: hide
+}
 .ELogin {
      height: 40vh;
      display: flex;

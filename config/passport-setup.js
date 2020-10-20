@@ -2,6 +2,7 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const passport = require('passport');
 const User = require('../models/user');
 const keys = require('./keys')
+
 passport.serializeUser(function (user, done) {
      done(null, user);
 });
