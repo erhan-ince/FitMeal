@@ -161,6 +161,87 @@ app.get('/success', (req, res) => {
 
 app.get('/cancel', (req, res) => res.send('Cancelled'));
 
+
+
+//Paypal2----------------------------
+// Pay------------------------------------------------------
+app.post('/pay1/:id', (req, res) => {
+   console.log(req.params.id);
+      const create_payment_json = {
+         intent: 'sale',
+         payer: {
+            payment_method: 'paypal',
+         },
+         redirect_urls: {
+            return_url: 'http://localhost:3000/success',
+            cancel_url: 'http://localhost:3000/cancel',
+         },
+         transactions: [
+            {
+               item_list: {
+                  items: [
+                     {
+                        name: "title",
+                        sku: 'item',
+                        price: 49.99,
+                        currency: 'EUR',
+                        quantity: 1,
+                     },
+                  ],
+               },
+               amount: {
+                  currency: 'EUR',
+                  total: 49.99,
+               },
+               description: 'This is the payment description.',
+            },
+         ],
+      };
+      paypal.payment.create(create_payment_json, function (error, payment) {
+         if (error) {
+            throw error;
+         } else {
+            for (let i = 0; i < payment.links.length; i++) {
+               if (payment.links[i].rel === 'approval_url') {
+                  res.redirect(payment.links[i].href);
+               }
+            }
+         }
+      });
+   });
+
+app.get('/success', (req, res) => {
+   const payerId = req.query.PayerID;
+   const paymentId = req.query.paymentId;
+
+   const execute_payment_json = {
+      payer_id: payerId,
+      transactions: [
+         {
+            amount: {
+               currency: 'EUR',
+               total: 49.99,
+            },
+         },
+      ],
+   };
+   paypal.payment.execute(paymentId, execute_payment_json, function (
+      error,
+      payment
+   ) {
+      if (error) {
+         console.log(error.response);
+         throw error;
+      } else {
+         console.log(JSON.stringify(payment));
+         res.send('Succes');
+      }
+   });
+});
+
+app.get('/cancel', (req, res) => res.send('Cancelled'));
+
+
 // Filter-----------------------------
 
 app.post('/filter', (req, res) => {
