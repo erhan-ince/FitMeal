@@ -6,7 +6,7 @@ require('./config/passport-setup');
 const passport = require('passport');
 const app = express();
 const profileRoutes = require('./routes/profileRoutes');
-const keys = require('./config/keys');
+//const keys = require('./config/keys');
 const Meal = require('./models/meals');
 const Newsletter = require('./models/newsletter');
 const PORT = process.env.PORT || 3000
@@ -34,7 +34,7 @@ let fat;
 //
 
 mongoose
-     .connect(keys.mongodb.dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
+     .connect(process.env.dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
      .then((result) => {
           console.log('db connected');
           app.listen(PORT, () => {
@@ -46,7 +46,7 @@ app.use(
    cookieSession({
       name: 'session',
       maxAge: 24 * 60 * 60 * 1000,
-      keys: [keys.session.cookieKey],
+      keys: [process.env.cookieKey],
    })
 );
 
@@ -78,8 +78,8 @@ app.get('/products', (req, res) => {
 // Paypal
 paypal.configure({
    mode: 'sandbox', //sandbox or live
-   client_id: keys.paypal.client_id,
-   client_secret: keys.paypal.client_secret,
+   client_id: process.env.client_id,
+   client_secret: process.env.client_secret,
 });
 
 // Pay------------------------------------------------------
