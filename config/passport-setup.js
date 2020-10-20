@@ -1,7 +1,7 @@
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const passport = require('passport');
 const User = require('../models/user');
-const keys = require('./keys')
+//const keys = require('./keys')
 
 passport.serializeUser(function (user, done) {
      done(null, user);
@@ -14,9 +14,9 @@ passport.deserializeUser(function (id, done) {
 passport.use(
      new GoogleStrategy(
           {
-               clientID: keys.google.clientID,
-               clientSecret: keys.google.clientSecret,
-               callbackURL: 'http://localhost:3000/auth/google/callback',
+               clientID: process.env.clientID ,
+               clientSecret: process.env.clientSecret ,
+               callbackURL: 'https://serene-hamlet-52311.herokuapp.com/auth/google/callback',
           },
           (accessToken, refreshToken, profile, done) => {
                console.log(profile);
